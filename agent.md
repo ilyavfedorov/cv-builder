@@ -57,11 +57,11 @@ Build the `"workExperience"` array ordered **newest-first**.
 | Nicotech International | Analyst-Programmer | 2005-04 | 2005-10 | full-time |
 | Sportmaster | Analyst-Programmer | 2001-09 | 2005-04 | full-time |
 
-> **Note on Te Kete Hono:** Create a single entry with role "Head of Technology" spanning May 2020 – Oct 2024. Merge all achievements, responsibilities, and inferred skills from across the full tenure into this one entry.
+> **Note on Te Kete Hono:** Create a single entry with role "Head of Technology" spanning May 2020 – Oct 2024. Merge all role bullets (`highlights`) and inferred skills from across the full tenure into this one entry.
 
 ### Source priority
 
-Each CV was written at a point in time. Use the source that was **closest to the role's end date** as the primary source (it will have the most detail for that role). Supplement from other CVs if they add achievements or responsibilities not present in the primary source.
+Each CV was written at a point in time. Use the source that was **closest to the role's end date** as the primary source (it will have the most detail for that role). Supplement from other CVs if they add highlight bullets not present in the primary source.
 
 - **2026 CV** → primary for Mindhive and Tradify
 - **2024 CV** → primary for Te Kete Hono and Serko
@@ -78,11 +78,8 @@ Each CV was written at a point in time. Use the source that was **closest to the
   "to": "YYYY-MM | present",
   "industry": "string — one short phrase describing the industry",
   "companyDescription": "string — one or two sentences describing the company from the CV",
-  "achievements": [
-    "string — each achievement as a separate item, verbatim from the CV"
-  ],
-  "responsibilities": [
-    "string — each responsibility as a separate item, verbatim from the CV"
+  "highlights": [
+    "string — merged list: outcomes and delivered work first, then ongoing scope/duties; verbatim from the CV"
   ],
   "techStack": [
     "string — each distinct technology, language, framework, or tool listed for this role"
@@ -93,10 +90,9 @@ Each CV was written at a point in time. Use the source that was **closest to the
 }
 ```
 
-**achievements vs responsibilities:**
-- `achievements` = concrete outcomes, results, metrics, delivered work (look for words like "reduced", "improved", "built", "delivered", "launched", "achieved", "migrated", "implemented")
-- `responsibilities` = ongoing duties and areas of ownership (look for words like "led", "managed", "directed", "oversaw", "collaborated", "facilitated", "guided")
-- If a CV uses both headings explicitly, follow them. If a CV combines them, classify each bullet yourself using the definitions above.
+**Ordering within `highlights`:**
+- When the CV splits **Achievements** and **Responsibilities**, concatenate into one array: all achievement bullets first, then all responsibility bullets, preserving verbatim wording.
+- If the CV combines them already, preserve source order.
 
 **techStack:**
 - List each individual technology separately — do not bundle them into a comma-separated string.
@@ -107,7 +103,7 @@ Each CV was written at a point in time. Use the source that was **closest to the
 
 ## Step 4 — Infer Skills
 
-For each work experience entry, populate `"inferredSkills"` by reading every item in `achievements` and `responsibilities` for that role and extracting the concrete, specific skill demonstrated.
+For each work experience entry, populate `"inferredSkills"` by reading every item in `highlights` for that role and extracting the concrete, specific skill demonstrated.
 
 ### Rules
 
@@ -154,9 +150,9 @@ Known entries:
 
 ---
 
-## Step 6 — Extract Professional Development
+## Step 6 — Extract Professional Development & Community
 
-Find the **Professional Development**, **Leadership & Community**, and any equivalent sections in the CVs. These appear only in the 2026 CV. Extract each distinct activity.
+Find the **Professional Development**, **Professional Development & Community**, **Leadership & Community**, and any equivalent sections in the CVs. These appear only in the 2026 CV. Extract each distinct activity.
 
 ```json
 {
@@ -213,9 +209,9 @@ After writing `cv-data.json`, read it back and write a human-readable `<personFo
 (one section per role, newest first)
 
 ## Education
-(table)
+(bullet list)
 
-## Professional Development
+## Professional Development & Community
 (bullet list)
 ```
 
@@ -227,10 +223,8 @@ After writing `cv-data.json`, read it back and write a human-readable `<personFo
 
 > Company description
 
-**Achievements**
-- ...
+**Highlights**
 
-**Responsibilities**
 - ...
 
 **Tech:** comma-separated tech stack
@@ -238,16 +232,20 @@ After writing `cv-data.json`, read it back and write a human-readable `<personFo
 
 Rules:
 - Omit `inferredSkills` — it is downstream-processing metadata, not human-facing content.
-- Skip the **Achievements** heading entirely if the `achievements` array is empty.
-- Skip the **Responsibilities** heading entirely if the `responsibilities` array is empty.
+- Skip the **Highlights** section entirely if the `highlights` array is empty.
+- After `**Highlights**`, output one blank line before the first `-` bullet so bullets render as a list in PDF export.
 - Skip the **Tech:** line entirely if `techStack` is empty.
 - Format dates as `Mon YYYY` (e.g. `Feb 2025`). Use `present` as-is for the current role.
 
 ### Education format
 
-Render as a Markdown table with columns **Qualification** and **Institution**.
+Render as a bullet list. Bold the qualification name and separate the institution with an em-dash:
 
-### Professional Development format
+```markdown
+- **Qualification name** — Institution name
+```
+
+### Professional Development & Community format
 
 Render as a bullet list. Bold the description and append the period in parentheses where a `period` field exists.
 

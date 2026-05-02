@@ -26,7 +26,8 @@
 
 > AI/ML company delivering industrial computer vision solutions for automated grading, defect detection, and operational workflows.
 
-**Achievements**
+**Highlights**
+
 - Established engineering leadership structure, improving alignment, accountability, and team effectiveness.
 - Designed and implemented a new delivery cadence to improve predictability and reduce disruption from reactive demand.
 - Introduced structured intake, triage, and prioritisation across Engineering, Product, and Customer Success.
@@ -34,8 +35,6 @@
 - Supported shift toward a more productised and scalable operating model.
 - Strengthened platform operations and follow-the-sun support capability, improving resilience.
 - Accelerated adoption of AI-assisted engineering practices to improve delivery effectiveness.
-
-**Responsibilities**
 - Lead engineering across software, platform, and ML delivery in a globally distributed startup (NZ, Brazil, Europe).
 - Contributed to SLT and board discussions on capacity, prioritisation, security posture, and organisational design.
 
@@ -48,15 +47,14 @@
 
 > High-growth SaaS platform for trades businesses, scaling rapidly across international markets.
 
-**Achievements**
+**Highlights**
+
 - Initiated and delivered frontend modernisation (AngularJS → React) with a zero-downtime migration approach.
 - Introduced flow metrics across engineering and product, enabling data-driven delivery decisions.
 - Identified and resolved systemic platform misuse, reducing spamming incidents by ~75%.
 - Established structured initiatives to reduce technical debt and improve system health.
 - Transitioned performance management to continuous feedback, improving engagement and development.
 - Strengthened engineering culture, increasing psychological safety and team effectiveness.
-
-**Responsibilities**
 - Led multiple engineering teams, aligning delivery with product strategy and scaling objectives.
 - Acted as a key interface between engineering and senior leadership.
 
@@ -69,7 +67,8 @@
 
 > Social impact enterprise backed by Hugh Green Foundation, delivering 3 SaaS products to 20,000+ users across the education sector. Mission-driven to accelerate learning in schools through cutting-edge technology and pedagogy.
 
-**Achievements**
+**Highlights**
+
 - Established and maintained a technology governance framework to drive development excellence of 3 SaaS products.
 - Organised a highly innovative, self-organising, and results-driven team of 6 technology experts.
 - Prepared data privacy and security policies, terms of use and code of conduct protecting the data of 20,000+ users.
@@ -77,8 +76,6 @@
 - Planned and executed infrastructure modernisation and migration to a different Cloud Provider reducing operational costs by 50%.
 - Implemented Secure Development Life Cycle practices and passed an external security audit with zero risks reported and 100% compliance rating achieved.
 - Orchestrated the on-time and under-budget launch of an ed-tech product, utilising agile methodologies to streamline development and reduce time-to-market by 25%.
-
-**Responsibilities**
 - Established the initial technology partnership and laid the foundations for the organisation's technology strategy and engineering capability.
 - Developed strategic technology vision and 3-year rolling development roadmap for product and component ecosystem aligned with business objectives.
 - Directed operational management by overseeing the performance and scalability of 3 SaaS products.
@@ -100,14 +97,13 @@
 
 > Technology company which offers intelligent corporate travel and expense solutions, controlling more than 70% of the corporate travel market in New Zealand and Australia.
 
-**Achievements**
+**Highlights**
+
 - Built a tightly knit team of 6 developers.
 - Created a safe, open culture to stimulate collaboration across 5 teams.
 - Coached developers, promoted knowledge sharing, increased performance of the team by 50% (pair programming and mobbing).
 - Reduced error rates on critical pathways by 90%.
 - Promoted a 'build it and own it' mindset where developers own 100% of software development life cycle of the code they have developed.
-
-**Responsibilities**
 - Fostered a safe and productive environment for teams (can-do attitude, mutual support, fail fast, learn from mistakes, manage risks, seek opportunities to innovate, seek feedback).
 - Guided teams to stabilise the product (create visibility of production issues, remove the fear of deployment, raise the maturity of development practices, and improve code quality).
 - Collaborated with the product team to define roadmaps and manage customer expectations.
@@ -126,14 +122,13 @@
 
 > Digital consultancy helping businesses make pragmatic and cost efficient technology decisions, managing clients across government, commercial, and startup sectors.
 
-**Achievements**
+**Highlights**
+
 - Identity migration across 10 corporate websites.
 - MVP delivery for NZ-based AML startup on time and budget.
 - Design and development of professional learning and development system.
 - Video streaming platform prototype for a NZ leading rugby team.
 - Implementation of Silverstripe content management system for NZ leading rugby team.
-
-**Responsibilities**
 - Liaised with client stakeholders to define product vision and product roadmap.
 - Collaborated with the client to prioritise product deliverables.
 - Drafted and prioritised user stories for the product backlog.
@@ -156,13 +151,12 @@
 
 > Social impact startup that developed a software platform to help teachers track student progress, monitor engagement, and assess achievement based on evidence, including student self-assessment.
 
-**Achievements**
+**Highlights**
+
 - Co-founded and built a SaaS platform from concept to production.
 - Secured funding through grants and stakeholder engagement.
 - Delivered measurable improvements in teaching practices and student outcomes.
 - Built and led engineering capability, introducing agile practices.
-
-**Responsibilities**
 - Performed market research and market validation of the product.
 - Liaised in a consultative fashion with domain experts and defined the product requirements.
 - Shaped and prioritised product features.
@@ -188,7 +182,8 @@
 
 > Technology partner of VISA providing Total Transaction Management solutions.
 
-**Achievements**
+**Highlights**
+
 - Created Web Applications and Web Services.
 - Implemented Single Sign-On mechanisms with trusted parties.
 - Integrated with third-party Web Services using public APIs.
@@ -207,7 +202,8 @@
 
 > New Zealand courier and logistics company operating NZ Couriers, DX Mail, Post Haste, Pass the Parcel, and Castle Parcels.
 
-**Achievements**
+**Highlights**
+
 - Redesign of core Track and Trace services.
 - Courier Cards Software Package.
 - In-Depot Consignment Scanning.
@@ -216,8 +212,6 @@
 - Developed core User Access Control framework.
 - Developed core Graphical User Interface framework.
 - Developed core Job Execution Engine framework.
-
-**Responsibilities**
 - Interviewed stakeholders.
 - Documented business processes, defined business and system requirements.
 - Engaged with key users to prepare system specification.
@@ -243,11 +237,10 @@
 
 > Investment company based in Russia/USA.
 
-**Achievements**
+**Highlights**
+
 - Payroll Processing system.
 - Consultant Motivation System.
-
-**Responsibilities**
 - Interviewed stakeholders.
 - Documented business processes.
 - Engaged with key users to prepare system specification.
@@ -270,11 +263,10 @@
 
 > Software house.
 
-**Achievements**
+**Highlights**
+
 - Equipment tracking system.
 - Intranet solution for internal orders tracking.
-
-**Responsibilities**
 - Participated in pre-project enterprise audit.
 - Prepared design documents.
 - Designed and built data layers, developed representation and business layers.
@@ -290,11 +282,10 @@
 
 > Leading sportswear retailer in Russia.
 
-**Achievements**
+**Highlights**
+
 - International Logistics – Shipment Tracking and Management.
 - International Logistics – Fiscal Accounting.
-
-**Responsibilities**
 - Interviewed stakeholders.
 - Documented business processes.
 - Engaged with key users to prepare system specification.
@@ -318,7 +309,7 @@
 
 ---
 
-## Professional Development
+## Professional Development & Community
 
 - **Executive Coaching with Noah Cantor** (2024–present)
 - **Executive Coaching with Paul Birch** (2025–present)

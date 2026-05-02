@@ -79,7 +79,7 @@ Output to `<jobFolder>/cv-tailored.md`.
 
 ## Education
 
-## Professional Development
+## Professional Development & Community
 ```
 
 ### Summary (5–7 bullets)
@@ -94,18 +94,18 @@ Output to `<jobFolder>/cv-tailored.md`.
 Apply three emphasis tiers based on recency and relevance to the role:
 
 **Tier 1** — the 3 most recent or most relevant roles:
-- Show full `achievements` and `responsibilities`
+- Show full `highlights` (combined scope and outcomes for the role)
 - Reframe bullet wording to use JD vocabulary where it fits — the factual content must remain directly traceable to `cv-data.json`; only the phrasing changes
 - Front-load JD-relevant technologies in the `Tech:` line
 
 **Tier 2** — older roles with meaningful relevance:
-- Show full `achievements`
-- Trim `responsibilities` to 1–2 lines
+- Show full `highlights`
+- Consider trimming duplicate or low-value bullets — keep at least outcomes and headline scope visible
 - No vocabulary reframing required
 
 **Tier 3** — roles pre-2010 or with low relevance:
 - Company, role, dates, and one-line `companyDescription` only
-- No achievements, responsibilities, or tech stack
+- No highlights or tech stack
 
 Format each role identically to `cv.md`:
 
@@ -115,20 +115,20 @@ Format each role identically to `cv.md`:
 
 > Company description
 
-**Achievements**
-- ...
+**Highlights**
 
-**Responsibilities**
 - ...
 
 **Tech:** comma-separated tech stack
 ```
 
-Omit `Achievements`, `Responsibilities`, or `Tech:` sections entirely if empty or suppressed by tier.
+Omit `Highlights` or `Tech:` sections entirely if empty or suppressed by tier.
 
-### Education and Professional Development
+After `**Highlights**`, include **one blank line** before the first bullet so Markdown (and Chrome PDF export) treats the bullets as a list, consistent with spacing under section headings such as Summary.
 
-Copy verbatim from `cv-data.json` — no changes.
+### Education and Professional Development & Community
+
+Copy items verbatim from `cv-data.json` (`education`, `professionalDevelopment`) — no changes. Use heading `## Professional Development & Community`.
 
 ---
 
