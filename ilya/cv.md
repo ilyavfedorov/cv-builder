@@ -64,24 +64,10 @@
 
 ---
 
-### Te Kete Hono — Advisor to the Board
-**Dec 2023 – Oct 2024** · advisory · EdTech, SaaS
+### Te Kete Hono — Head of Technology
+**May 2020 – Oct 2024** · contract · EdTech, SaaS
 
-> Social impact ed-tech organisation delivering SaaS products to 20,000+ users across the education sector.
-
-**Responsibilities**
-- Supported the board in the sale of the business to a new entity.
-- Met with prospective buyer representatives to present the product, team, and technology.
-- Articulated the product story, value proposition, and roadmap to external stakeholders.
-- Described team structure, capabilities, and engineering culture to prospective buyers.
-- Explained system architecture and technical foundations to due diligence participants.
-
----
-
-### Te Kete Hono — Head of Software Engineering
-**Mar 2021 – Dec 2023** · contract · EdTech, SaaS
-
-> Social impact enterprise backed by Hugh Green Foundation. Its mission is to accelerate learning in schools by implementing cutting edge technology and pedagogy practices.
+> Social impact enterprise backed by Hugh Green Foundation, delivering 3 SaaS products to 20,000+ users across the education sector. Mission-driven to accelerate learning in schools through cutting-edge technology and pedagogy.
 
 **Achievements**
 - Established and maintained a technology governance framework to drive development excellence of 3 SaaS products.
@@ -93,27 +79,19 @@
 - Orchestrated the on-time and under-budget launch of an ed-tech product, utilising agile methodologies to streamline development and reduce time-to-market by 25%.
 
 **Responsibilities**
-- Developed strategic technology vision and 3 year rolling development roadmap for product and component ecosystem aligned with business objectives.
-- Directed Operational Management by overseeing the performance and scalability of 3 SaaS products.
+- Established the initial technology partnership and laid the foundations for the organisation's technology strategy and engineering capability.
+- Developed strategic technology vision and 3-year rolling development roadmap for product and component ecosystem aligned with business objectives.
+- Directed operational management by overseeing the performance and scalability of 3 SaaS products.
 - Co-ordinated the financial management of all aspects of technology to ensure optimal costs.
-- Owned all aspects of the relationship with third party vendors and partners.
-- Managed stakeholder and the Board relationship and communication to ensure efficient development, implementation and maintenance of systems.
-- Developed and delivered the annual marketing and sales plan.
-- Drove change in team's culture and ways of work to create company wide high trust environment.
-- Guided the team to raise maturity of their development practices.
-- Advised team members on the best career development opportunities and the best ways to stretch their skills.
+- Owned all aspects of the relationship with third-party vendors and partners.
+- Managed stakeholder and board relationships and communication to ensure efficient development, implementation, and maintenance of systems.
+- Drove change in team culture and ways of work to create a company-wide high-trust environment.
+- Guided the team to raise the maturity of their development practices.
+- Advised team members on career development opportunities and ways to stretch their skills.
+- Supported the board in the sale of the business to a new entity.
+- Articulated the product story, value proposition, and roadmap to external stakeholders; explained system architecture and technical foundations to due diligence participants.
 
 **Tech:** JavaScript ES6, React, Material UI, Webpack Module Federation, Jest, React Testing Library, C# .NET, Azure Functions, Entity Framework, SQL Server, Cosmos DB, Azure Tables, Azure Queues, Azure Blob Storage, Azure DevOps, Git, CI/CD pipelines, YAML, SonarCloud
-
----
-
-### Te Kete Hono — Technology Partner
-**May 2020 – Mar 2021** · contract · EdTech, SaaS
-
-> Social impact enterprise backed by Hugh Green Foundation. Its mission is to accelerate learning in schools by implementing cutting edge technology and pedagogy practices.
-
-**Responsibilities**
-- Established the initial technology partnership and began laying the foundations for the organisation's technology strategy and engineering capability.
 
 ---
 
@@ -344,6 +322,6 @@
 
 - **Executive Coaching with Noah Cantor** (2024–present)
 - **Executive Coaching with Paul Birch** (2025–present)
-- Founded and facilitate a peer forum of engineering leaders (Canva, Gentrack, Fintfox) focused on scaling teams, delivery systems, and leadership effectiveness
+- Founded and facilitate a peer forum of engineering leaders focused on scaling teams, delivery systems, and leadership effectiveness
 - Mentor at University of Auckland Chiasma programme
 - **Chair, local VEX V5 robotics club** supporting homeschooled students in competitive robotics (2026)

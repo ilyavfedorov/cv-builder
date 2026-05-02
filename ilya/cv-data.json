@@ -101,40 +101,12 @@
     },
     {
       "company": "Te Kete Hono",
-      "role": "Advisor to the Board",
-      "type": "advisory",
-      "from": "2023-12",
+      "role": "Head of Technology",
+      "type": "contract",
+      "from": "2020-05",
       "to": "2024-10",
       "industry": "EdTech, SaaS",
-      "companyDescription": "Social impact ed-tech organisation delivering SaaS products to 20,000+ users across the education sector.",
-      "achievements": [],
-      "responsibilities": [
-        "Supported the board in the sale of the business to a new entity.",
-        "Met with prospective buyer representatives to present the product, team, and technology.",
-        "Articulated the product story, value proposition, and roadmap to external stakeholders.",
-        "Described team structure, capabilities, and engineering culture to prospective buyers.",
-        "Explained system architecture and technical foundations to due diligence participants."
-      ],
-      "techStack": [],
-      "inferredSkills": [
-        "board advisory",
-        "business sale support",
-        "due diligence participation",
-        "product storytelling",
-        "architecture presentation",
-        "team capability presentation",
-        "stakeholder communication",
-        "technology value proposition"
-      ]
-    },
-    {
-      "company": "Te Kete Hono",
-      "role": "Head of Software Engineering",
-      "type": "contract",
-      "from": "2021-03",
-      "to": "2023-12",
-      "industry": "EdTech, SaaS",
-      "companyDescription": "Social impact enterprise backed by Hugh Green Foundation. Its mission is to accelerate learning in schools by implementing cutting edge technology and pedagogy practices.",
+      "companyDescription": "Social impact enterprise backed by Hugh Green Foundation, delivering 3 SaaS products to 20,000+ users across the education sector. Mission-driven to accelerate learning in schools through cutting-edge technology and pedagogy.",
       "achievements": [
         "Established and maintained a technology governance framework to drive development excellence of 3 SaaS products",
         "Organised a highly innovative, self-organising, and results-driven team of 6 technology experts",
@@ -145,15 +117,17 @@
         "Orchestrated the on-time and under-budget launch of an ed-tech product, utilising agile methodologies to streamline development and reduce time-to-market by 25%"
       ],
       "responsibilities": [
-        "Developed strategic technology vision and 3 year rolling development roadmap for product and component ecosystem aligned with business objectives",
-        "Directed Operational Management by overseeing the performance and scalability of 3 SaaS products",
-        "Co-ordinated the financial management of all aspects of technology to ensure optimal costs",
-        "Owned all aspects of the relationship with third party vendors and partners",
-        "Managed stakeholder and the Board relationship and communication to ensure efficient development, implementation and maintenance of systems",
-        "Developed and delivered the annual marketing and sales plan",
-        "Drove change in team's culture and ways of work to create company wide high trust environment",
-        "Guided the team to raise maturity of their development practices",
-        "Advised team members on the best career development opportunities and the best ways to stretch their skills"
+        "Established the initial technology partnership and laid the foundations for the organisation's technology strategy and engineering capability.",
+        "Developed strategic technology vision and 3-year rolling development roadmap for product and component ecosystem aligned with business objectives.",
+        "Directed operational management by overseeing the performance and scalability of 3 SaaS products.",
+        "Co-ordinated the financial management of all aspects of technology to ensure optimal costs.",
+        "Owned all aspects of the relationship with third-party vendors and partners.",
+        "Managed stakeholder and board relationships and communication to ensure efficient development, implementation, and maintenance of systems.",
+        "Drove change in team culture and ways of work to create a company-wide high-trust environment.",
+        "Guided the team to raise the maturity of their development practices.",
+        "Advised team members on career development opportunities and ways to stretch their skills.",
+        "Supported the board in the sale of the business to a new entity.",
+        "Articulated the product story, value proposition, and roadmap to external stakeholders; explained system architecture and technical foundations to due diligence participants."
       ],
       "techStack": [
         "JavaScript ES6",
@@ -177,6 +151,7 @@
         "SonarCloud"
       ],
       "inferredSkills": [
+        "technology strategy foundation",
         "technology governance framework",
         "microservices architecture",
         "cloud provider migration",
@@ -192,25 +167,13 @@
         "cost optimisation",
         "SaaS product management",
         "self-organising team leadership",
-        "time-to-market reduction"
-      ]
-    },
-    {
-      "company": "Te Kete Hono",
-      "role": "Technology Partner",
-      "type": "contract",
-      "from": "2020-05",
-      "to": "2021-03",
-      "industry": "EdTech, SaaS",
-      "companyDescription": "Social impact enterprise backed by Hugh Green Foundation. Its mission is to accelerate learning in schools by implementing cutting edge technology and pedagogy practices.",
-      "achievements": [],
-      "responsibilities": [
-        "Established the initial technology partnership and began laying the foundations for the organisation's technology strategy and engineering capability."
-      ],
-      "techStack": [],
-      "inferredSkills": [
-        "technology partnership establishment",
-        "technology strategy foundation"
+        "time-to-market reduction",
+        "board advisory",
+        "business sale support",
+        "due diligence participation",
+        "product storytelling",
+        "architecture presentation",
+        "stakeholder communication"
       ]
     },
     {
@@ -723,7 +686,7 @@
       "period": "2025–present"
     },
     {
-      "description": "Founded and facilitate a peer forum of engineering leaders (Canva, Gentrack, Fintfox) focused on scaling teams, delivery systems, and leadership effectiveness"
+      "description": "Founded and facilitate a peer forum of engineering leaders focused on scaling teams, delivery systems, and leadership effectiveness"
     },
     {
       "description": "Mentor at University of Auckland Chiasma programme"

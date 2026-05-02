@@ -47,9 +47,7 @@ Build the `"workExperience"` array ordered **newest-first**.
 |---|---|---|---|---|
 | Mindhive | Head of Engineering | 2025-02 | present | full-time |
 | Tradify | Senior Software Engineering Manager | 2023-12 | 2025-02 | full-time |
-| Te Kete Hono | Advisor to the Board | 2023-12 | 2024-10 | advisory |
-| Te Kete Hono | Head of Software Engineering | 2021-03 | 2023-12 | contract |
-| Te Kete Hono | Technology Partner | 2020-05 | 2021-03 | contract |
+| Te Kete Hono | Head of Technology | 2020-05 | 2024-10 | contract |
 | Serko | Software Engineering Manager | 2019-08 | 2020-04 | contract |
 | Propellerhead | Product Owner / Development Manager | 2017-10 | 2019-11 | contract |
 | Schooltalk | Co-founder / Software Engineering Manager | 2015-01 | 2017-09 | co-founder |
@@ -59,14 +57,14 @@ Build the `"workExperience"` array ordered **newest-first**.
 | Nicotech International | Analyst-Programmer | 2005-04 | 2005-10 | full-time |
 | Sportmaster | Analyst-Programmer | 2001-09 | 2005-04 | full-time |
 
-> **Note on Te Kete Hono:** Create three separate entries — one per role. They share the same company and description but have different roles, dates, achievements, and responsibilities.
+> **Note on Te Kete Hono:** Create a single entry with role "Head of Technology" spanning May 2020 – Oct 2024. Merge all achievements, responsibilities, and inferred skills from across the full tenure into this one entry.
 
 ### Source priority
 
 Each CV was written at a point in time. Use the source that was **closest to the role's end date** as the primary source (it will have the most detail for that role). Supplement from other CVs if they add achievements or responsibilities not present in the primary source.
 
 - **2026 CV** → primary for Mindhive and Tradify
-- **2024 CV** → primary for Te Kete Hono (all three roles) and Serko
+- **2024 CV** → primary for Te Kete Hono and Serko
 - **2020 CV** → primary for Propellerhead, Schooltalk, Fraedom.com, Freightways, Thor United, Nicotech International, Sportmaster
 
 ### Schema for each entry
