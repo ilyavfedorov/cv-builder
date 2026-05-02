@@ -83,13 +83,13 @@ One paragraph explaining the overall verdict — what makes this a strong or poo
 
 ## Step 5 — Rename the folder
 
-After writing `analysis.md`, rename the folder by appending the verdict to its name. Use the Shell tool:
+After writing `analysis.md`, rename the folder by appending the verdict to its name. Use the Shell tool with a two-step approach to avoid duplicate folders in sandboxed environments:
 
 ```bash
-mv "<person>/job-opportunities/<original-name>" "<person>/job-opportunities/<original-name> - GO"
+cp -r "<person>/job-opportunities/<original-name>" "<person>/job-opportunities/<original-name> - GO" && rm -rf "<person>/job-opportunities/<original-name>"
 ```
 
-Replace ` - GO` with ` - NO GO` for a no-go verdict. Quote paths to handle spaces.
+Replace ` - GO` with ` - NO GO` for a no-go verdict. Quote all paths to handle spaces. After running, verify only the renamed folder exists.
 
 ---
 
