@@ -199,9 +199,65 @@ Validate that:
 
 ---
 
+## Step 8 — Generate the Markdown CV
+
+After writing `cv-data.json`, read it back and write a human-readable `<personFolder>/cv.md`.
+
+### Document structure
+
+```
+# <Name> — CV
+
+## Summary
+(one bullet per summary item)
+
+## Work Experience
+(one section per role, newest first)
+
+## Education
+(table)
+
+## Professional Development
+(bullet list)
+```
+
+### Work experience format (per role)
+
+```markdown
+### Company — Role
+**Mon YYYY – Mon YYYY** · type · industry
+
+> Company description
+
+**Achievements**
+- ...
+
+**Responsibilities**
+- ...
+
+**Tech:** comma-separated tech stack
+```
+
+Rules:
+- Omit `inferredSkills` — it is downstream-processing metadata, not human-facing content.
+- Skip the **Achievements** heading entirely if the `achievements` array is empty.
+- Skip the **Responsibilities** heading entirely if the `responsibilities` array is empty.
+- Skip the **Tech:** line entirely if `techStack` is empty.
+- Format dates as `Mon YYYY` (e.g. `Feb 2025`). Use `present` as-is for the current role.
+
+### Education format
+
+Render as a Markdown table with columns **Qualification** and **Institution**.
+
+### Professional Development format
+
+Render as a bullet list. Bold the description and append the period in parentheses where a `period` field exists.
+
+---
+
 ## Completion
 
-Once `cv-data.json` has been written, confirm the full file path (including the person folder) and report:
+Once both files have been written, confirm the full file paths (including the person folder) and report:
 - Total number of work experience entries
 - Total number of unique inferred skills across all entries
 - Total number of summary points
