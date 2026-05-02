@@ -1,0 +1,207 @@
+# CV Data Extraction Agent
+
+## Goal
+
+Read all CV PDFs for a given person, extract and consolidate all career data, and write a single `cv-data.json` into that person's folder.
+
+---
+
+## Step 0 — Identify the person folder
+
+List the contents of the workspace root. The person folder is any subdirectory that is not `.cursor` or another config/system folder (e.g. `ilya`).
+
+- If exactly one person folder exists, use it automatically.
+- If multiple person folders exist, ask the user which person to process before continuing.
+
+All subsequent paths use `<personFolder>` to refer to that directory (e.g. `ilya`).
+
+---
+
+## Step 1 — Read all CVs
+
+Use the Read tool on every PDF file found inside `<personFolder>/cv-history/`. The PDFs are automatically converted to plain text.
+
+List the contents of `<personFolder>/cv-history/` first, then read each PDF found there. Read all files before writing anything.
+
+---
+
+## Step 2 — Extract the Summary
+
+Collect every bullet point from the **Summary** section of all three CVs.
+
+Rules:
+- Deduplicate semantically: if the same idea appears in multiple CVs with different wording, keep the **most detailed / most recent version** only.
+- Do **not** paraphrase — preserve the original wording exactly.
+- Order items starting from the most recent CV (2026), then 2024, then 2020.
+- The result is a flat array of strings in the top-level `"summary"` key.
+
+---
+
+## Step 3 — Extract Work Experience
+
+Build the `"workExperience"` array ordered **newest-first**.
+
+### Roles to extract
+
+| Company | Role | From | To | Type |
+|---|---|---|---|---|
+| Mindhive | Head of Engineering | 2025-02 | present | full-time |
+| Tradify | Senior Software Engineering Manager | 2023-12 | 2025-02 | full-time |
+| Te Kete Hono | Advisor to the Board | 2023-12 | 2024-10 | advisory |
+| Te Kete Hono | Head of Software Engineering | 2021-03 | 2023-12 | contract |
+| Te Kete Hono | Technology Partner | 2020-05 | 2021-03 | contract |
+| Serko | Software Engineering Manager | 2019-08 | 2020-04 | contract |
+| Propellerhead | Product Owner / Development Manager | 2017-10 | 2019-11 | contract |
+| Schooltalk | Co-founder / Software Engineering Manager | 2015-01 | 2017-09 | co-founder |
+| Fraedom.com | Senior Full-Stack Software Developer | 2013-04 | 2015-01 | full-time |
+| Freightways | Senior Analyst-Programmer | 2007-11 | 2013-03 | full-time |
+| Thor United | Senior Analyst-Programmer | 2006-02 | 2007-11 | full-time |
+| Nicotech International | Analyst-Programmer | 2005-04 | 2005-10 | full-time |
+| Sportmaster | Analyst-Programmer | 2001-09 | 2005-04 | full-time |
+
+> **Note on Te Kete Hono:** Create three separate entries — one per role. They share the same company and description but have different roles, dates, achievements, and responsibilities.
+
+### Source priority
+
+Each CV was written at a point in time. Use the source that was **closest to the role's end date** as the primary source (it will have the most detail for that role). Supplement from other CVs if they add achievements or responsibilities not present in the primary source.
+
+- **2026 CV** → primary for Mindhive and Tradify
+- **2024 CV** → primary for Te Kete Hono (all three roles) and Serko
+- **2020 CV** → primary for Propellerhead, Schooltalk, Fraedom.com, Freightways, Thor United, Nicotech International, Sportmaster
+
+### Schema for each entry
+
+```json
+{
+  "company": "string — company name",
+  "role": "string — exact job title",
+  "type": "full-time | contract | advisory | co-founder",
+  "from": "YYYY-MM",
+  "to": "YYYY-MM | present",
+  "industry": "string — one short phrase describing the industry",
+  "companyDescription": "string — one or two sentences describing the company from the CV",
+  "achievements": [
+    "string — each achievement as a separate item, verbatim from the CV"
+  ],
+  "responsibilities": [
+    "string — each responsibility as a separate item, verbatim from the CV"
+  ],
+  "techStack": [
+    "string — each distinct technology, language, framework, or tool listed for this role"
+  ],
+  "inferredSkills": [
+    "string — see skill inference rules below"
+  ]
+}
+```
+
+**achievements vs responsibilities:**
+- `achievements` = concrete outcomes, results, metrics, delivered work (look for words like "reduced", "improved", "built", "delivered", "launched", "achieved", "migrated", "implemented")
+- `responsibilities` = ongoing duties and areas of ownership (look for words like "led", "managed", "directed", "oversaw", "collaborated", "facilitated", "guided")
+- If a CV uses both headings explicitly, follow them. If a CV combines them, classify each bullet yourself using the definitions above.
+
+**techStack:**
+- List each individual technology separately — do not bundle them into a comma-separated string.
+- Include languages, frameworks, libraries, databases, cloud services, tools, and platforms.
+- Example: `["React", "Redux", "TypeScript", "Node.js", "C# .NET", "Azure", "SQL Server", "Azure DevOps", "CI/CD pipelines"]`
+
+---
+
+## Step 4 — Infer Skills
+
+For each work experience entry, populate `"inferredSkills"` by reading every item in `achievements` and `responsibilities` for that role and extracting the concrete, specific skill demonstrated.
+
+### Rules
+
+1. **Stay granular and literal** — use the exact capability named or strongly implied by the text. Do not roll up into category labels.
+   - ✅ `"pair programming"` — not `"Engineering Practices"`
+   - ✅ `"mob programming"` — not `"Engineering Practices"`
+   - ✅ `"TDD"` — not `"Testing"`
+   - ✅ `"CI/CD pipeline management"` — not `"DevOps"`
+   - ✅ `"infrastructure as code"` — not `"Cloud"`
+   - ✅ `"flow metrics"` — not `"Delivery Management"`
+   - ✅ `"microservices architecture"` — not `"Architecture"`
+   - ✅ `"grant writing"` — not `"Funding"`
+   - ✅ `"technical debt management"` — not `"Code Quality"`
+   - ✅ `"security audit preparation"` — not `"Security"`
+   - ✅ `"vendor coordination"` — not `"Stakeholder Management"`
+
+2. **Infer, do not invent** — only extract skills that are evidenced by the text. If it is not written or directly implied, leave it out.
+
+3. **Use short noun phrases** — each skill should be 1–5 words. No sentences.
+
+4. **Include soft skills when explicitly evidenced** — e.g. "fostered psychological safety" → `"psychological safety building"`. Do not add generic soft skills that are not mentioned.
+
+5. **Deduplicate within a role** — if the same skill appears in multiple bullets, list it once.
+
+6. **Do not copy techStack items into inferredSkills** — technologies belong in `techStack` only.
+
+---
+
+## Step 5 — Extract Education
+
+Find the **Education** section (present in all three CVs). The qualifications are the same across all CVs. Extract each qualification once.
+
+```json
+{
+  "qualification": "string — full qualification name",
+  "institution": "string — institution name"
+}
+```
+
+Known entries:
+- Postgraduate Diploma in Information Technology and Computer Science — Auckland University of Technology
+- Postgraduate Diploma in Business Analysis — Russian Academy of National Economy
+- Master of Applied Physics and Mathematics — Moscow Institute of Physics and Technology
+
+---
+
+## Step 6 — Extract Professional Development
+
+Find the **Professional Development**, **Leadership & Community**, and any equivalent sections in the CVs. These appear only in the 2026 CV. Extract each distinct activity.
+
+```json
+{
+  "description": "string — what it is, verbatim or very close to the source",
+  "period": "string — year or date range if given, otherwise omit the field"
+}
+```
+
+Known entries from the 2026 CV:
+- Executive Coaching with Noah Cantor (2024–present)
+- Executive Coaching with Paul Birch (2025–present)
+- Founded and facilitates a peer forum of engineering leaders (Canva, Gentrack, Fintfox)
+- Mentor at University of Auckland Chiasma programme
+- Chair, local VEX V5 robotics club supporting homeschooled students in competitive robotics (2026)
+
+---
+
+## Step 7 — Write the output file
+
+Write the complete JSON to `<personFolder>/cv-data.json` (e.g. `ilya/cv-data.json`).
+
+The top-level structure must be:
+
+```json
+{
+  "summary": [],
+  "workExperience": [],
+  "education": [],
+  "professionalDevelopment": []
+}
+```
+
+Validate that:
+- Every work experience entry has all required fields
+- `from` and `to` use `YYYY-MM` format (or the string `"present"` for current roles)
+- `techStack` and `inferredSkills` are arrays of individual strings, not comma-separated strings
+- There are no trailing commas or syntax errors in the JSON
+
+---
+
+## Completion
+
+Once `cv-data.json` has been written, confirm the full file path (including the person folder) and report:
+- Total number of work experience entries
+- Total number of unique inferred skills across all entries
+- Total number of summary points
