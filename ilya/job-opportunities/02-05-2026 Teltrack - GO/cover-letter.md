@@ -12,4 +12,4 @@ The one area I have not directly led is mobile engineering. My background is str
 
 The scope and challenge of this role are precisely what I am looking for. If the fit looks as clear from your side, I would welcome a direct conversation.
 
-Ilya
+Ilya Fedorov

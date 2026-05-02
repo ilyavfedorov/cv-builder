@@ -1,4 +1,15 @@
-# Ilya — Director of Software Engineering
+# Ilya Fedorov — Director of Software Engineering
+
+---
+
+## Contact
+
+- **Full name:** Ilya Fedorov
+- **Phone:** +64 21 071 0620
+- **Email:** ilya.fedorov@gmail.com
+- **LinkedIn:** https://www.linkedin.com/in/ilyafedorov/
+- **Location:** Auckland, New Zealand
+- **Immigration status:** New Zealand citizen
 
 ---
 
@@ -169,6 +180,6 @@
 
 - **Executive Coaching with Noah Cantor** (2024–present)
 - **Executive Coaching with Paul Birch** (2025–present)
-- **Founded and facilitate a peer forum of engineering leaders** focused on scaling teams, delivery systems, and leadership effectiveness
+- **Founded and facilitate a peer forum of engineering leaders (Canva, Gentrack, Fintfox)** focused on scaling teams, delivery systems, and leadership effectiveness
 - **Mentor at University of Auckland Chiasma programme**
 - **Chair, local VEX V5 robotics club** supporting homeschooled students in competitive robotics (2026)

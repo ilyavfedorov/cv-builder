@@ -1,4 +1,12 @@
 {
+  "contact": {
+    "fullName": "Ilya Fedorov",
+    "phone": "+64 21 071 0620",
+    "email": "ilya.fedorov@gmail.com",
+    "linkedinUrl": "https://www.linkedin.com/in/ilyafedorov/",
+    "location": "Auckland, New Zealand",
+    "immigrationStatus": "New Zealand citizen"
+  },
   "summary": [
     "Head of Engineering with 20+ years of experience across software development, system design, and organisational leadership in high-growth and mission-driven environments.",
     "Proven track record of building high-performing engineering teams, establishing scalable delivery systems, and aligning technology execution with business strategy.",
@@ -665,7 +673,7 @@
       "period": "2025–present"
     },
     {
-      "description": "Founded and facilitate a peer forum of engineering leaders focused on scaling teams, delivery systems, and leadership effectiveness"
+      "description": "Founded and facilitate a peer forum of engineering leaders (Canva, Gentrack, Fintfox) focused on scaling teams, delivery systems, and leadership effectiveness"
     },
     {
       "description": "Mentor at University of Auckland Chiasma programme"

@@ -71,7 +71,11 @@ Output to `<jobFolder>/cv-tailored.md`.
 ### Document structure
 
 ```
-# <Full Name> — <Role Title from JD>
+# <contact.fullName> — <Role Title from JD>
+
+## Contact
+
+Render from `<person>/cv-data.json` → `contact`: **Full name**, **Phone**, **Email**, **LinkedIn**, and **Location** / **Immigration status** when those fields exist. Omit a line if the field is missing.
 
 ## Summary
 

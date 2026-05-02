@@ -164,7 +164,7 @@ Find the **Professional Development**, **Professional Development & Community**,
 Known entries from the 2026 CV:
 - Executive Coaching with Noah Cantor (2024–present)
 - Executive Coaching with Paul Birch (2025–present)
-- Founded and facilitates a peer forum of engineering leaders (Canva, Gentrack, Fintfox)
+- Founded and facilitate a peer forum of engineering leaders (Canva, Gentrack, Fintfox)
 - Mentor at University of Auckland Chiasma programme
 - Chair, local VEX V5 robotics club supporting homeschooled students in competitive robotics (2026)
 
@@ -178,12 +178,22 @@ The top-level structure must be:
 
 ```json
 {
+  "contact": {
+    "fullName": "string",
+    "phone": "string",
+    "email": "string",
+    "linkedinUrl": "string",
+    "location": "string — optional, e.g. city and country from CV header",
+    "immigrationStatus": "string — optional; include if stated on the CV or provided by the candidate"
+  },
   "summary": [],
   "workExperience": [],
   "education": [],
   "professionalDevelopment": []
 }
 ```
+
+Extract **`contact`** from the CV header / footer of the most recent PDF (typically name, phone, email, LinkedIn; location if shown). Omit any field that does not appear in the source; use `"immigrationStatus"` only when the CV or candidate states it explicitly.
 
 Validate that:
 - Every work experience entry has all required fields
@@ -200,7 +210,10 @@ After writing `cv-data.json`, read it back and write a human-readable `<personFo
 ### Document structure
 
 ```
-# <Name> — CV
+# <Full name from contact.fullName> — CV
+
+## Contact
+ Render from `contact`: full name (if not only in the title), phone, email, LinkedIn URL, location and immigration status when present.
 
 ## Summary
 (one bullet per summary item)
