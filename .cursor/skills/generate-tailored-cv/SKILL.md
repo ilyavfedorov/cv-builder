@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 Produces two files for a specific job opportunity:
 - `cv-tailored.md` — a CV with job-matched language, keyword-injected and emphasis-tiered
-- `cover-letter.md` — a cover letter mirroring the JD's tone and vocabulary
+- `cover-letter.md` — written per [cover-letter-composer](../cover-letter-composer/SKILL.md) (conversational, short sentences, JD keywords, evidence-mapped)
 
 Facts come exclusively from `cv-data.json`. Nothing is invented.
 
@@ -19,6 +19,12 @@ Facts come exclusively from `cv-data.json`. Nothing is invented.
 **Person folder:** list the workspace root. Use any subdirectory that is not `.cursor` or a system folder (e.g. `ilya`). If more than one exists, ask the user.
 
 **Job folder:** use the folder containing the file the user currently has open (or most recently mentioned). If unclear, list `<person>/job-opportunities/` and ask.
+
+**Job folder layout (canonical files):** each opportunity is a subfolder of `<person>/job-opportunities/`. Before Step 1, **list `<jobFolder>`** and confirm these exist:
+- `job-description.md` — raw job posting (this exact filename)
+- `analysis.md` — fit analysis from job-screener (if not run yet, create or obtain before tailoring)
+
+If `job-description.md` is missing after listing, stop and ask the user to add it or give the correct path. Do not guess from other `.md` files in the folder (e.g. `analysis.md` is not a substitute for the JD).
 
 All subsequent paths use `<person>` and `<jobFolder>`.
 
@@ -38,7 +44,7 @@ Read all three in parallel:
 
 ### 2a — Tone and style fingerprint
 
-Extract these signals — they govern every sentence you write in Steps 3 and 4:
+Extract these signals — they govern Step 3; supply Step 2b keywords for the cover letter (see [cover-letter-composer](../cover-letter-composer/SKILL.md)):
 
 | Signal | What to detect |
 |---|---|
@@ -138,23 +144,7 @@ Copy items verbatim from `cv-data.json` (`education`, `professionalDevelopment`)
 
 ## Step 4 — Write `cover-letter.md`
 
-Output to `<jobFolder>/cover-letter.md`.
-
-Apply the tone/vocabulary fingerprint from Step 2a to every sentence.
-
-### Structure (4 paragraphs)
-
-**Paragraph 1 — Opening**
-Reference the company's stated mission, product, or challenge using their own language from the JD. State clearly why this specific role is compelling. One short paragraph.
-
-**Paragraph 2 — Core fit**
-Pick the 2–3 strongest alignment points from `analysis.md` Strengths. State each as a concrete claim backed by a specific achievement or role from `cv-data.json`. Use JD must-use keywords. Do not list everything — be selective and confident.
-
-**Paragraph 3 — Gap acknowledgement** *(include only if `analysis.md` lists a meaningful gap)*
-One sentence naming the gap plainly. Two sentences explaining why it does not block success in this role or how it is actively being bridged. Keep it brief and forward-looking. Omit this paragraph entirely if there are no meaningful gaps in `analysis.md`.
-
-**Paragraph 4 — Close**
-A direct, confident sentence expressing intent to discuss further. No filler phrases ("I look forward to", "please find attached", "thank you for your consideration"). Match the register of the JD's close section if it has one.
+Read and follow [cover-letter-composer](../cover-letter-composer/SKILL.md). Use the same `<person>`, `<jobFolder>`, and inputs as Steps 1–2. Output to `<jobFolder>/cover-letter.md`.
 
 ---
 
@@ -163,5 +153,5 @@ A direct, confident sentence expressing intent to discuss further. No filler phr
 After both files are written, report:
 
 - Paths of both files created
-- Top 5 JD keywords used and where each appears (CV summary / work experience / cover letter)
-- Any must-use keyword from Step 2b that could not be placed naturally (and why)
+- Top 5 JD keywords used and where each appears (CV summary / work experience / cover letter per cover-letter-composer)
+- Any must-use keyword from Step 2b that could not be placed naturally in the CV or cover letter (and why)
