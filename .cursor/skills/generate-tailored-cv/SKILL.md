@@ -81,7 +81,17 @@ Output to `<jobFolder>/cv-tailored.md`.
 
 ## Contact
 
-Render from `<person>/cv-data.json` → `contact`: **Full name**, **Phone**, **Email**, **LinkedIn**, and **Location** / **Immigration status** when those fields exist. Omit a line if the field is missing.
+Render from `<person>/cv-data.json` → `contact` as follows — bold full name on its own line, then each remaining field as a markdown list item. Omit a field if missing.
+
+```markdown
+**<fullName>**
+
+- <phone>
+- <email>
+- <linkedinUrl as a markdown link>
+- <location>
+- <immigrationStatus>
+```
 
 ## Summary
 
