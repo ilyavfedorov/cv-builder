@@ -12,10 +12,10 @@ Converts a CV markdown file to a clean PDF. Symbol cleanup runs automatically be
 
 ## One-time setup
 
-If `markdown2` is not installed, run this once:
+If `markdown2` or `websocket-client` is not installed, run this once:
 
 ```bash
-pip3 install --user markdown2
+pip3 install --user markdown2 websocket-client
 ```
 
 PDF rendering uses the system Google Chrome in headless mode — no extra downloads needed.

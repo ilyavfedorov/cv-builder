@@ -108,9 +108,12 @@ strong {
   font-weight: 700;
 }
 
-/* Suppress the auto-inserted page URL footer that md-to-pdf may add */
+/* Suppress all auto-inserted header/footer content (timestamp, path, URL) */
 @page {
-  @bottom-center {
-    content: none;
-  }
+  @top-left { content: none; }
+  @top-center { content: none; }
+  @top-right { content: none; }
+  @bottom-left { content: none; }
+  @bottom-center { content: none; }
+  @bottom-right { content: none; }
 }
