@@ -1,6 +1,6 @@
 ---
 name: export-cv-pdf
-description: Exports a CV markdown file (cv.md or cv-tailored.md) to a clean PDF with 1.5 line spacing, consistent typography, and AI-signature symbols removed. Use when the user asks to export, save, or convert a CV to PDF.
+description: Exports a CV markdown file (cv.md, {personSlug}-{jobKey}-cv-tailored.md, or legacy cv-tailored.md) to a clean PDF with 1.5 line spacing, consistent typography, and AI-signature symbols removed. Use when the user asks to export, save, or convert a CV to PDF.
 disable-model-invocation: true
 ---
 
@@ -24,10 +24,16 @@ PDF rendering uses the system Google Chrome in headless mode — no extra downlo
 
 ## Step 1 - Identify the input file
 
-- If the user has a `cv-tailored.md` open in the current job folder, use that.
+- If the user has an open tailored CV file in the current job folder, use it:
+  - prefer `{personSlug}-{jobKey}-cv-tailored.md` (name derived from `cv-data.json` and the job description, same as the generate-tailored-cv skill)
+  - otherwise allow legacy `cv-tailored.md`
+- If no file is open, list the current job folder:
+  - if exactly one file matches `*-cv-tailored.md`, use it
+  - if multiple files match `*-cv-tailored.md`, ask the user which one to export
+  - if none match, fall back to legacy `cv-tailored.md` when present
 - Otherwise use `<person>/cv.md`.
 
-The output PDF is placed in the same folder as the input file, with `.pdf` extension (e.g. `cv-tailored.pdf`).
+The output PDF is placed in the same folder as the input file, with the same basename and a `.pdf` extension (e.g. `jane-doe-acme-senior-product-manager-cv-tailored.pdf`).
 
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: job-screener
-description: Screens job opportunities against a candidate's cv-data.json. Writes an analysis.md and renames each job-opportunities subfolder with " - GO" or " - NO GO". Use when asked to screen, evaluate, or triage job opportunities.
+description: Screens job opportunities against a candidate's cv-data.json. Writes a {jobKey}-analysis.md file and renames each job-opportunities subfolder with " - GO" or " - NO GO". Use when asked to screen, evaluate, or triage job opportunities.
 disable-model-invocation: true
 ---
 
@@ -39,6 +39,19 @@ If there are no unprocessed folders, report that all jobs have already been scre
 
 For each unprocessed folder, read `job-description.md` inside it (if there is no file by that exact name, read the first `.md` file found).
 
+From the job description, extract:
+
+- `company` — employer name used in the analysis heading
+- `role` — advertised role title used in the analysis heading
+
+Then compute:
+
+- `companySlug` — lowercase, replace runs of non-alphanumeric characters with `-`, trim leading/trailing `-`, collapse duplicate `-`
+- `roleSlug` — same normalization as `companySlug`
+- `jobKey` — `{companySlug}-{roleSlug}`
+
+If either slug is empty after normalization, stop and ask the user instead of guessing. If `jobKey` is longer than ~80 characters, truncate `roleSlug` from the right until `jobKey` is within ~80 characters.
+
 Evaluate fit across these dimensions:
 
 - **Seniority match** — do the required years of experience and leadership scope align with the candidate's career history?
@@ -54,9 +67,9 @@ Evaluate fit across these dimensions:
 
 ---
 
-## Step 4 — Write `analysis.md`
+## Step 4 — Write `{jobKey}-analysis.md`
 
-Write the file to `<person>/job-opportunities/<folder>/analysis.md` using this structure:
+Write the file to `<person>/job-opportunities/<folder>/{jobKey}-analysis.md` using this structure:
 
 ```markdown
 # Job Screening: <Company> — <Role>
@@ -83,7 +96,7 @@ One paragraph explaining the overall verdict — what makes this a strong or poo
 
 ## Step 5 — Rename the folder
 
-After writing `analysis.md`, rename the folder by appending the verdict to its name. Use the Shell tool with a two-step approach to avoid duplicate folders in sandboxed environments:
+After writing `{jobKey}-analysis.md`, rename the folder by appending the verdict to its name. Use the Shell tool with a two-step approach to avoid duplicate folders in sandboxed environments:
 
 ```bash
 cp -r "<person>/job-opportunities/<original-name>" "<person>/job-opportunities/<original-name> - GO" && rm -rf "<person>/job-opportunities/<original-name>"
