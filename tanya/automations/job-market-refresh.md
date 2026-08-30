@@ -1,0 +1,21 @@
+# Scheduled task: Tanya job-market refresh
+
+**Schedule:** `RRULE:FREQ=WEEKLY;BYDAY=MO,TH;BYHOUR=9;BYMINUTE=0`
+**Timezone:** `Pacific/Auckland`
+**Destination:** This existing career-search chat
+**Project mode:** Local project `C:\Source\cv-builder`
+
+## Prompt
+
+Run Tanya Poletaeva's job-market refresh using the local project at `C:\Source\cv-builder`.
+
+1. Read `tanya/search-profile.json`, `tanya/cv-data.json`, `tanya/job-feed/current-jobs.csv`, `tanya/job-feed/scored-jobs.csv`, `tanya/career-framework/application-decision-gate.md`, and `tanya/career-framework/calm-work-screen.md` before searching.
+2. Search current public vacancies posted since the previous scheduled run. Prioritise employer career pages, SEEK, LinkedIn, reputable NZ recruiters, and roles that explicitly support Auckland hybrid, North Shore, remote New Zealand, or NZ-based work for Australian organisations.
+3. Search only Tanya's target families: mature-platform .NET/SQL Tech Lead, Principal or Staff Engineer, ERP Technical Architect, Principal ERP/SQL Consultant, internal Solution Architect, and small-team Engineering Manager roles.
+4. Apply hard gates: compensation must plausibly reach NZD 160,000 base and should preferably reach NZD 170,000-180,000; Auckland office attendance must be no more than three days; exclude routine on-call, escalation-led support, presales-heavy consulting, broad programme management, and high-ambiguity startup generalist roles unless evidence strongly contradicts the risk.
+5. Treat calm work as a first-class requirement: clear ownership, feasible workload, limited interruptions and meetings, protected focus, low concurrent work in progress, and no routine after-hours responsibility.
+6. Deduplicate by company, title, location, and canonical URL. Do not re-add expired, rejected, or already-screened roles unless the description or compensation materially changed.
+7. Add genuinely new candidates to `tanya/job-feed/current-jobs.csv`, preserving source wording for calm evidence and risks. Do not invent salary, work mode, or stress evidence; leave unknown fields blank and make them verification gates.
+8. Run `python scripts/job_feed.py --profile tanya/search-profile.json --input tanya/job-feed/current-jobs.csv --output tanya/job-feed/scored-jobs.csv`.
+9. Report only the best new matches. Apply the framework's hard gates and positive-fit test. For each, give score, salary evidence, location/work mode, why it fits, calm-work risks, decision (`Apply`, `Research first`, `Exceptional-case apply`, or `Decline`), and the recruiter questions needed before applying. If nothing clears the bar, say so plainly rather than weakening the criteria.
+10. Include source links and the search date. Do not tailor a CV or apply without Tanya's explicit instruction.

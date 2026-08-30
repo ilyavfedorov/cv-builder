@@ -1,0 +1,43 @@
+{
+  "candidate": "Tanya Poletaeva",
+  "marketDate": "2026-08-30",
+  "hardFilters": {
+    "minimumSalaryNzd": 160000,
+    "preferredSalaryNzd": 170000,
+    "maximumOfficeDays": 3,
+    "allowedOfficeAreas": ["North Shore", "Auckland CBD", "Auckland"],
+    "allowedRemoteMarkets": ["New Zealand", "Australia"],
+    "employmentTypes": ["permanent", "contract"]
+  },
+  "weights": {
+    "skillsFit": 30,
+    "calmWorkFit": 30,
+    "compensationFit": 20,
+    "locationFit": 10,
+    "energyFit": 10
+  },
+  "calmPositiveSignals": [
+    "clear ownership", "mature platform", "small team", "stable organisation", "flexible hours",
+    "work-life balance", "autonomy", "focused", "well-defined", "4.5 day week", "no on-call"
+  ],
+  "calmRiskSignals": [
+    "on-call", "incident response", "triage", "high-growth", "fast-paced", "wear many hats",
+    "competing priorities", "customer escalations", "presales", "workshops", "travel", "greenfield",
+    "high-visibility", "multiple squads", "service ownership", "24/7", "startup"
+  ],
+  "targetRoleFamilies": [
+    "Tech Lead - .NET/SQL", "ERP Technical Architect", "Solution Architect",
+    "Principal ERP/SQL Consultant", "Staff Engineer - .NET/SQL", "Engineering Manager - mature product"
+  ],
+  "excludeByDefault": [
+    "support leadership with escalation ownership", "site reliability/on-call", "presales-heavy architecture",
+    "programme management across many workstreams", "early-stage startup generalist"
+  ],
+  "searchUrls": [
+    "https://nz.seek.com/technical-lead-jobs/in-All-Auckland",
+    "https://nz.seek.com/data-architect-jobs/in-All-Auckland",
+    "https://nz.seek.com/dynamics-365-solution-architect-jobs",
+    "https://nz.linkedin.com/jobs/tech-lead-jobs",
+    "https://nz.linkedin.com/jobs/solutions-architect-jobs-auckland"
+  ]
+}

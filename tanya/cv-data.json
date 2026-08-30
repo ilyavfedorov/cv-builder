@@ -1,0 +1,187 @@
+{
+  "contact": {
+    "fullName": "Tanya Poletaeva",
+    "phone": "0210490083",
+    "email": "tt.korenev@gmail.com",
+    "location": "Auckland, New Zealand",
+    "immigrationStatus": "New Zealand citizen"
+  },
+  "careerPreferences": {
+    "salaryMinimumNzd": 160000,
+    "desiredMonthlyNetNzd": 10000,
+    "employmentTypes": ["permanent", "contract"],
+    "roleTypes": ["individual contributor", "principal", "management"],
+    "officeDaysMaximum": 3,
+    "officeLocations": ["North Shore", "Auckland CBD"],
+    "remoteLocations": ["New Zealand", "Australia"],
+    "calmWorkRequirements": [
+      "clear responsibilities",
+      "doable workload",
+      "few interruptions",
+      "few meetings",
+      "focus on one thing at a time"
+    ],
+    "energisingWork": [
+      "solving complex problems",
+      "focused flow work",
+      "motivating and inspiring people",
+      "protecting teams from overwork while remaining efficient",
+      "finding people's strengths",
+      "complex SQL databases and queries"
+    ]
+  },
+  "summary": [
+    "People-centred engineering and delivery leader with 20 years across software development, enterprise product delivery, implementation and team leadership.",
+    "Experienced leading engineers and translating complex customer and product needs into technical direction, practical delivery plans and reliable solutions across cloud ERP and trade and revenue management platforms.",
+    "Currently leads 6 engineers at Gentrack and previously managed support, implementation and development teams.",
+    "Owned customer delivery for a cloud ERP platform serving 75+ New Zealand and Australian clients.",
+    "Known for empathetic people leadership, structured problem solving, clear engineering standards, stakeholder partnership and improving team capability through coaching and repeatable practices."
+  ],
+  "workExperience": [
+    {
+      "company": "Gentrack",
+      "role": "Technical Team Lead",
+      "from": "2025-07",
+      "to": "present",
+      "location": "Auckland",
+      "highlights": [
+        "Leads a team of 6 engineers, including people leadership, delegation, planning, delivery alignment and capability development.",
+        "Built a high-trust team culture with stronger knowledge sharing, smoother processes and spontaneous collaboration.",
+        "Partners with stakeholders on quarterly planning, backlog shaping and prioritisation.",
+        "Led CI/CD modernisation from Jenkins to AWS-based pipelines, improving build and deployment readiness.",
+        "Designed a practical capability-uplift programme for C# adoption across the team.",
+        "Introduced AI-assisted documentation and analysis of legacy solutions.",
+        "Designed an AI-assisted performance-review workflow using Amazon Quick on desktop, configuring constrained Jira evidence retrieval for 6 team members and reducing preparation time from at least one working week to one day while personally reviewing and enriching every final review.",
+        "Guided delivery of CodeBuild pipelines intended to cut build and deployment time significantly."
+      ],
+      "skills": [
+        "people leadership", "delegation", "quarterly planning", "backlog shaping", "prioritisation",
+        "CI/CD modernisation", "AWS CodeBuild", "Jenkins", "C# enablement", "legacy-system analysis",
+        "AI-assisted engineering", "Amazon Quick on desktop", "Jira integration", "AI workflow design",
+        "evidence-based performance reviews", "stakeholder management", "mentoring", "team advocacy"
+      ]
+    },
+    {
+      "company": "First Software",
+      "role": "Head of Support / Implementation Manager",
+      "from": "2023-02",
+      "to": "2025-07",
+      "location": "Auckland",
+      "highlights": [
+        "Led 5 support analysts and software developers across onboarding, mentoring, training, work allocation, performance and delivery decisions.",
+        "Owned support and implementation delivery for a cloud ERP platform serving 75+ New Zealand and Australian clients.",
+        "Managed discovery, solution design, configuration, customisation, reporting, data migration, training, go-live and post-go-live support.",
+        "Improved consistency through reusable documentation, training material and implementation practices.",
+        "Supported integrations including EFTPOS NZ, Courier Post, NZ Post and Xero."
+      ],
+      "skills": [
+        "ERP delivery", "support leadership", "implementation management", "customer discovery", "solution design",
+        "data migration", "training", "go-live", "capacity management", "operational risk", "systems integration"
+      ]
+    },
+    {
+      "company": "First Software",
+      "role": "Go-Live Manager",
+      "from": "2020-12",
+      "to": "2023-02",
+      "location": "Auckland",
+      "highlights": [
+        "Led ERP go-live programmes from client workshops through configuration, change delivery, training, launch and early-life support.",
+        "Analysed operating needs and workflows, identified ERP capability and coordinated solution design and delivery.",
+        "Created user guides, solution documentation and training tools for sustainable adoption.",
+        "Improved implementation practices for efficiency, scalability and reliability."
+      ],
+      "skills": ["ERP go-live", "workflow analysis", "requirements analysis", "change delivery", "training", "documentation", "continuous improvement"]
+    },
+    {
+      "company": "First Software",
+      "role": "Senior Consultant",
+      "from": "2019-07",
+      "to": "2020-10",
+      "location": "Auckland",
+      "highlights": [
+        "Combined customer-facing solution design with hands-on C#, ASP.NET, SQL, reporting, JSON and integration work.",
+        "Investigated data and process issues, estimated changes and implemented agreed solutions.",
+        "Triaged operational requests and identified root causes."
+      ],
+      "skills": ["C#", "ASP.NET", "SQL", "JSON", "reporting", "integrations", "root-cause analysis", "estimation"]
+    },
+    {
+      "company": "Flintfox International",
+      "role": "Team Lead",
+      "from": "2018-01",
+      "to": "2019-06",
+      "location": "Auckland",
+      "highlights": [
+        "Led a development and test pod across work allocation, scope, risk, budgets, timelines, coaching, performance and recruitment support.",
+        "Turned complex customer scenarios into technical designs and implementation plans.",
+        "Established coding guidelines, development standards, review practices and technical documentation.",
+        "Delivered Component Switch pricing and more than five other 200+ hour projects on schedule.",
+        "Led the highest-performing team in two consecutive performance reviews."
+      ],
+      "skills": ["technical leadership", "solution design", "estimation", "risk assessment", "code review", "engineering standards", "coaching"]
+    },
+    {
+      "company": "Flintfox International",
+      "role": "Senior Software Developer",
+      "from": "2009-01",
+      "to": "2018-01",
+      "location": "Auckland",
+      "highlights": [
+        "Modelled complex pricing and accrual rules across hundreds of real-world scenarios for Trade and Revenue Management products.",
+        "Designed logic for Stepped Breaks, Payment Sync, GL Resolve, Free Goods and Price Breaks.",
+        "Used SQL performance analysis to improve data integrity, product behaviour and processing efficiency.",
+        "Supported developers and customer implementations across locations."
+      ],
+      "skills": ["SQL", "T-SQL", "data modelling", "query performance", "pricing logic", "accrual logic", "Dynamics AX", "Dynamics 365", "X++"]
+    },
+    {
+      "company": "RAA Spectekhnika / Bio-Rad-related work",
+      "role": "C# .NET Developer",
+      "from": "2006-01",
+      "to": "2009-01",
+      "location": "Moscow",
+      "highlights": ["Developed C#/.NET software for aviation simulator systems and blood and plasma analysis workflows."],
+      "skills": ["C#", ".NET", "technical software development"]
+    }
+  ],
+  "education": [
+    {"qualification": "Bachelor's in Physics and Engineering", "institution": "Moscow Engineer-Physics State University", "year": 2008},
+    {"qualification": "Certificate in Software Engineering: C# .NET", "institution": "Moscow Aviation University", "year": 2006}
+  ],
+  "certifications": [
+    "Microsoft Certified Technical Specialist: .NET Framework 2.0 Application Development and Windows Applications (2008)",
+    "Microsoft Dynamics AX Development Introduction (2016)",
+    "Using Azure for Data Platform Solutions (2017)",
+    "HDInsight for Solution Architects (2017)"
+  ],
+  "technicalToolkit": [
+    "C#", "ASP.NET", "SQL", "T-SQL", "JSON", "APIs", "integrations", "SSRS", "X++",
+    "Dynamics AX 2009/2012", "Dynamics 365", "cloud ERP", "Azure DevOps", "AWS pipelines", "CI/CD", "Jenkins",
+    "Amazon Quick on desktop", "Jira"
+  ],
+  "interestRatings": [
+    {"item": "Writing queries in SQL", "interest": 9, "skill": 9},
+    {"item": "Analyzing patterns at work", "interest": 9, "skill": 8},
+    {"item": "Leading the team", "interest": 9, "skill": 8},
+    {"item": "Strategic planning and choice", "interest": 9, "skill": 7},
+    {"item": "Solving complex work challenges", "interest": 7, "skill": 7},
+    {"item": "Programming in C#", "interest": 4, "skill": 7},
+    {"item": "Composing music in Flat", "interest": 9, "skill": 6},
+    {"item": "Producing music in Reaper", "interest": 8, "skill": 4},
+    {"item": "Playing piano", "interest": 6, "skill": 5},
+    {"item": "Playing accordion", "interest": 7, "skill": 1}
+  ],
+  "developmentEvidence": {
+    "strengthsFromManager": [
+      "empathetic and inspiring people leadership", "approachability and openness to feedback",
+      "team advocacy and delegation", "relationship building and influence", "proactive planning and team alignment"
+    ],
+    "growthAreas": [
+      "deepen technical understanding of the current product and system architecture",
+      "set and uphold delivery expectations consistently",
+      "minimise work in progress and improve estimation accuracy",
+      "understand and apply DORA metrics"
+    ]
+  }
+}
