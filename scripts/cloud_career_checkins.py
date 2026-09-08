@@ -12,11 +12,12 @@ import re
 import smtplib
 import urllib.error
 import urllib.request
-from datetime import date
+from datetime import date, datetime
 from email.header import decode_header
 from email.message import EmailMessage
 from email.utils import parseaddr
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -26,6 +27,11 @@ LEARNING_LOG = FRAMEWORK / "learning-log.md"
 REVIEWS = FRAMEWORK / "reviews"
 REPLY_STATE = FRAMEWORK / "email-replies/processed-message-ids.txt"
 SUBJECT_PREFIX = "Tanya career check-in"
+AUCKLAND = ZoneInfo("Pacific/Auckland")
+
+
+def today_in_auckland() -> date:
+    return datetime.now(AUCKLAND).date()
 
 
 def required(name: str) -> str:
@@ -77,7 +83,7 @@ def api_json(prompt: str, name: str, schema: dict) -> dict:
 
 
 def weekly() -> None:
-    today = date.today().isoformat()
+    today = today_in_auckland().isoformat()
     body = f"""Weekly learning check-in — {today}
 
 Reply to this email with short notes. Plain language is perfect:
@@ -105,7 +111,7 @@ MONTHLY_SCHEMA = {
 
 
 def monthly(force: bool = False) -> None:
-    today = date.today()
+    today = today_in_auckland()
     if not force and not (today.weekday() == 4 and today.day <= 7):
         print("Not the first Friday; monthly review skipped")
         return

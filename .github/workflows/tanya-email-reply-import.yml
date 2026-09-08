@@ -29,6 +29,8 @@ jobs:
       - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
+      - name: Install timezone data
+        run: pip install tzdata
       - name: Import replies
         run: python scripts/cloud_career_checkins.py process-replies
       - name: Commit imported evidence
