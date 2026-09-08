@@ -1,0 +1,58 @@
+name: Tanya job-market refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 9 * * 1,4"
+      timezone: "Pacific/Auckland"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: tanya-job-market-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.6-luna' }}
+      GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      REPORT_TO: ${{ vars.REPORT_TO || 'mcgillavry@gmail.com' }}
+      GITHUB_REPOSITORY_URL: https://github.com/${{ github.repository }}
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install PDF dependencies
+        run: pip install -r requirements-cloud.txt
+
+      - name: Search, score, and prepare qualifying CVs
+        run: python scripts/cloud_job_market_refresh.py
+
+      - name: Commit refreshed market data and CVs
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tanya/job-feed tanya/job-opportunities
+          if git diff --cached --quiet; then
+            echo "No repository changes to commit"
+          else
+            git commit -m "chore: refresh Tanya job market"
+            git push
+          fi
+
+      - name: Email the report
+        run: python scripts/send_job_market_email.py
+
