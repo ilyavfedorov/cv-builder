@@ -1,0 +1,23 @@
+name: Tanya weekly learning check-in
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 16 * * 5"
+      timezone: "Pacific/Auckland"
+
+jobs:
+  check-in:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      REPORT_TO: ${{ vars.REPORT_TO || 'mcgillavry@gmail.com' }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Email weekly learning check-in
+        run: python scripts/cloud_career_checkins.py weekly

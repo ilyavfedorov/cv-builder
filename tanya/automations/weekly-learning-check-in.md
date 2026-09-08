@@ -2,8 +2,8 @@
 
 **Schedule:** `RRULE:FREQ=WEEKLY;BYDAY=FR;BYHOUR=16;BYMINUTE=0`
 **Timezone:** `Pacific/Auckland`
-**Destination:** This existing career-search chat
-**Project mode:** Local project `C:\Source\cv-builder`
+**Destination:** Email to Tanya, sent by GitHub Actions
+**Project mode:** Cloud workflow `.github/workflows/tanya-weekly-learning-check-in.yml`
 
 ## Prompt
 
@@ -18,6 +18,6 @@ Read `tanya/cv-data.json` and `tanya/career-framework/weekly-evidence-capture.md
 5. Who benefited or gave feedback.
 6. Whether the evidence is confidential and needs sanitising.
 
-Do not update files during the scheduled prompt. Wait for Tanya's reply. After she replies, classify the evidence using the framework's evidence ladder, distinguish learning from demonstrated capability, remove confidential details, deduplicate against existing evidence, and propose the exact concise additions to `tanya/cv-data.json`. Update the file only after Tanya confirms the wording or explicitly asks for automatic addition. Preserve factual traceability and do not inflate one week of exposure into expert-level skill.
+Do not update evidence files when sending the scheduled prompt. When Tanya replies by email, the hourly reply-import workflow classifies the evidence using the framework's evidence ladder, distinguishes learning from demonstrated capability, removes confidential details, and deduplicates it. Add the sanitised entry to `tanya/career-framework/learning-log.md`. Add concise evidence to `tanya/cv-data.json` automatically only for level 3-5 evidence directly supported by Tanya's reply. Preserve factual traceability and do not inflate one week of exposure into expert-level skill.
 
 Where useful, also identify one follow-up action that would turn learning into stronger CV evidence, such as measuring an outcome, writing an architecture decision record, demonstrating the technique, or getting stakeholder feedback.

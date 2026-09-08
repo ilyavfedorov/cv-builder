@@ -1,0 +1,41 @@
+name: Tanya monthly career-strategy review
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 17 * * 5"
+      timezone: "Pacific/Auckland"
+
+permissions:
+  contents: write
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5.6-luna' }}
+      GMAIL_ADDRESS: ${{ secrets.GMAIL_ADDRESS }}
+      GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+      REPORT_TO: ${{ vars.REPORT_TO || 'mcgillavry@gmail.com' }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Create and email monthly review
+        run: python scripts/cloud_career_checkins.py monthly ${{ github.event_name == 'workflow_dispatch' && '--force' || '' }}
+      - name: Commit monthly review
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add tanya/career-framework/reviews
+          if git diff --cached --quiet; then
+            echo "No monthly review changes to commit"
+          else
+            git commit -m "chore: update Tanya monthly career review"
+            git push
+          fi
