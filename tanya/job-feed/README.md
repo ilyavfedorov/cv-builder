@@ -6,7 +6,7 @@ The feed stores current vacancies in a portable CSV, then applies Tanya's hard f
 
 ## Refresh cycle
 
-1. Open the saved searches listed in `../search-profile.json` or enable alerts on SEEK and LinkedIn.
+1. Search all three required boards in `../search-profile.json`: SEEK New Zealand, SEEK Australia, and Trade Me Jobs. The cloud refresh explicitly searches each board using web search, alongside employer pages, LinkedIn, and NZ recruiters. For manual refreshes, use the saved search URLs and search each required board or enable its alerts. Australian roles must explicitly allow working from New Zealand. Web search coverage depends on publicly accessible/indexed listings and is not a complete board export.
 2. Add promising results to `current-jobs.csv`. Keep the source URL and exact wording that supports any calm-work score.
 3. Run:
 

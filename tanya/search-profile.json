@@ -33,6 +33,11 @@
     "support leadership with escalation ownership", "site reliability/on-call", "presales-heavy architecture",
     "programme management across many workstreams", "early-stage startup generalist"
   ],
+  "requiredJobBoards": [
+    {"name": "SEEK New Zealand", "domain": "nz.seek.com"},
+    {"name": "SEEK Australia", "domain": "seek.com.au"},
+    {"name": "Trade Me Jobs", "domain": "trademe.co.nz", "section": "Jobs"}
+  ],
   "searchUrls": [
     "https://nz.seek.com/technical-lead-jobs/in-All-Auckland",
     "https://nz.seek.com/data-architect-jobs/in-All-Auckland",

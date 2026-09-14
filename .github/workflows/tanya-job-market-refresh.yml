@@ -2,6 +2,11 @@ name: Tanya job-market refresh
 
 on:
   workflow_dispatch:
+    inputs:
+      send_email:
+        description: Send the report email after a manual run
+        type: boolean
+        default: false
   schedule:
     - cron: "0 9 * * 1,4"
       timezone: "Pacific/Auckland"
@@ -55,4 +60,5 @@ jobs:
           fi
 
       - name: Email the report
+        if: github.event_name == 'schedule' || inputs.send_email
         run: python scripts/send_job_market_email.py

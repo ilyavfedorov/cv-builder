@@ -92,6 +92,11 @@ def api_response(prompt: str, schema_name: str, schema: dict) -> dict:
         details = error.read().decode("utf-8", errors="replace")
         raise RuntimeError(f"OpenAI API error {error.code}: {details}") from error
 
+    if schema_name == "job_market_candidates":
+        for item in result.get("output", []):
+            if item.get("type") == "web_search_call":
+                print("Job discovery search: " + json.dumps(item.get("action", {}), ensure_ascii=False), flush=True)
+
     texts = [
         part.get("text", "")
         for item in result.get("output", []) if item.get("type") == "message"
@@ -159,8 +164,15 @@ Verified CV evidence:
 
 Search only these families: mature-platform .NET/SQL Tech Lead, Principal or Staff Engineer,
 ERP Technical Architect, Principal ERP/SQL Consultant, internal Solution Architect, and
-small-team Engineering Manager. Prioritise employer career pages, SEEK, LinkedIn and reputable
-New Zealand recruiters. Location must support Auckland/North Shore with no more than 3 office
+small-team Engineering Manager. Search every board in requiredJobBoards separately on every run:
+SEEK New Zealand (nz.seek.com), SEEK Australia (seek.com.au), and Trade Me Jobs (trademe.co.nz).
+Use domain-targeted web searches across the target role families; do not treat searching one SEEK
+market as covering both. If a board cannot be accessed directly, search its publicly indexed job
+listings and verify details against employer career pages where possible. Never invent vacancies
+to fill a source gap. Also search employer career pages, LinkedIn and reputable New Zealand
+recruiters. Australian listings must explicitly permit working from New Zealand; Australia-only
+remote work does not qualify. Deduplicate vacancies found on multiple boards.
+Location must support Auckland/North Shore with no more than 3 office
 days, remote New Zealand, or NZ-based work for an Australian organisation. Compensation must
 plausibly reach NZD 160,000 base. Calm work is a first-class requirement. Exclude routine on-call,
 escalation support, presales-heavy consulting, broad programme management and ambiguous startup
