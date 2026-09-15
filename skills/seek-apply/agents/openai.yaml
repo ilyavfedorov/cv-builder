@@ -1,0 +1,4 @@
+interface:
+  display_name: "SEEK Apply"
+  short_description: "Prepare and verify SEEK job applications"
+  default_prompt: "Review the exact SEEK vacancy, use verified candidate evidence and matching tailored documents, prepare the application for review, and submit only when explicitly authorised."

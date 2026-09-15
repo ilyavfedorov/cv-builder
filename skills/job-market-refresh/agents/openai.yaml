@@ -1,0 +1,4 @@
+interface:
+  display_name: "Job Market Refresh"
+  short_description: "Refresh, score, and prepare current job matches"
+  default_prompt: "Run the configured candidate job-market refresh across every required board, deduplicate and score live roles, and prepare verified tailored materials for qualifying matches."
