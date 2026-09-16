@@ -24,6 +24,7 @@ SCORED_PATH = ROOT / "tanya/job-feed/scored-jobs.csv"
 REPORT_PATH = ROOT / "tanya/job-feed/latest-refresh.md"
 OPPORTUNITIES = ROOT / "tanya/job-opportunities"
 GENERATION_LOG = OPPORTUNITIES / "generation-log.csv"
+CV_GENERATION_THRESHOLD = 70.0
 
 CURRENT_FIELDS = [
     "captured_date", "source", "company", "title", "location", "work_mode",
@@ -205,7 +206,7 @@ Known URLs to exclude: {json.dumps(sorted(known_urls))}
     for row in new_scored:
         url_key = canonical(row["url"])
         if (
-            float(row["total_score_100"]) < 80
+            float(row["total_score_100"]) < CV_GENERATION_THRESHOLD
             or row["compensation_gate"].startswith("FAIL")
             or row["location_gate"].startswith("FAIL")
             or url_key in generated_urls

@@ -5,7 +5,7 @@
 Generate a CV when all conditions hold:
 
 - The vacancy was newly discovered in the current Monday or Thursday pull.
-- Its final score is at least 80.0/100.
+- Its final score is at least 70.0/100.
 - Neither `compensation_gate` nor `location_gate` begins with `FAIL`.
 - The canonical URL is not already present in `../job-opportunities/generation-log.csv`.
 - Enough job-description evidence is available to tailor truthfully.
@@ -34,4 +34,3 @@ Before logging success:
 - Confirm the PDF opens, contains Tanya's name and has no blank pages.
 - Render pages to images when Poppler is available and inspect for clipping, overlap or unreadable text.
 - Record failures in the generation log and report them; do not silently claim a CV was created.
-
