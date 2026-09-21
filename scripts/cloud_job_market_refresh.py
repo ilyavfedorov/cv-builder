@@ -8,10 +8,12 @@ import json
 import os
 import re
 import subprocess
+import time
 import urllib.error
 import urllib.request
-from datetime import date
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from pypdf import PdfReader
 
@@ -25,6 +27,8 @@ REPORT_PATH = ROOT / "tanya/job-feed/latest-refresh.md"
 OPPORTUNITIES = ROOT / "tanya/job-opportunities"
 GENERATION_LOG = OPPORTUNITIES / "generation-log.csv"
 CV_GENERATION_THRESHOLD = 70.0
+MAX_API_ATTEMPTS = 5
+AUCKLAND_TIMEZONE_NAME = "Pacific/Auckland"
 
 CURRENT_FIELDS = [
     "captured_date", "source", "company", "title", "location", "work_mode",
@@ -68,6 +72,24 @@ TAILOR_SCHEMA = {
 }
 
 
+def rate_limit_delay(error: urllib.error.HTTPError, details: str, attempt: int) -> float:
+    retry_after = error.headers.get("Retry-After") if error.headers else None
+    if retry_after:
+        try:
+            return max(float(retry_after), 0.0) + 1.0
+        except ValueError:
+            pass
+
+    match = re.search(r"try again in\s+([0-9.]+)s", details, flags=re.IGNORECASE)
+    if match:
+        return float(match.group(1)) + 1.0
+    return min(10.0 * (2 ** attempt), 60.0)
+
+
+def auckland_today() -> str:
+    return datetime.now(ZoneInfo(AUCKLAND_TIMEZONE_NAME)).date().isoformat()
+
+
 def api_response(prompt: str, schema_name: str, schema: dict) -> dict:
     api_key = os.environ.get("OPENAI_API_KEY", "").strip()
     if not api_key:
@@ -86,12 +108,22 @@ def api_response(prompt: str, schema_name: str, schema: dict) -> dict:
         headers={"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"},
         method="POST",
     )
-    try:
-        with urllib.request.urlopen(request, timeout=240) as response:
-            result = json.load(response)
-    except urllib.error.HTTPError as error:
-        details = error.read().decode("utf-8", errors="replace")
-        raise RuntimeError(f"OpenAI API error {error.code}: {details}") from error
+    for attempt in range(MAX_API_ATTEMPTS):
+        try:
+            with urllib.request.urlopen(request, timeout=240) as response:
+                result = json.load(response)
+            break
+        except urllib.error.HTTPError as error:
+            details = error.read().decode("utf-8", errors="replace")
+            if error.code != 429 or attempt == MAX_API_ATTEMPTS - 1:
+                raise RuntimeError(f"OpenAI API error {error.code}: {details}") from error
+            delay = rate_limit_delay(error, details, attempt)
+            print(
+                f"OpenAI rate limit reached; retrying in {delay:.1f}s "
+                f"({attempt + 2}/{MAX_API_ATTEMPTS})",
+                flush=True,
+            )
+            time.sleep(delay)
 
     if schema_name == "job_market_candidates":
         for item in result.get("output", []):
@@ -154,7 +186,7 @@ def main() -> None:
     known_urls = {canonical(row["url"]) for row in current}
     generated_urls = {canonical(row["url"]) for row in read_csv(GENERATION_LOG)}
     last_date = max((row["captured_date"] for row in current), default=profile.get("marketDate", ""))
-    today = date.today().isoformat()
+    today = auckland_today()
 
     search_prompt = f"""Search current public job vacancies posted after {last_date}.
 Candidate profile and rules:
