@@ -36,13 +36,19 @@
   "requiredJobBoards": [
     {"name": "SEEK New Zealand", "domain": "nz.seek.com"},
     {"name": "SEEK Australia", "domain": "seek.com.au"},
-    {"name": "Trade Me Jobs", "domain": "trademe.co.nz", "section": "Jobs"}
+    {"name": "Trade Me Jobs", "domain": "trademe.co.nz", "section": "Jobs"},
+    {"name": "Blackbird Jobs", "domain": "jobs.blackbird.vc", "url": "https://jobs.blackbird.vc/"},
+    {"name": "Icehouse Ventures Jobs", "domain": "jobs.icehouseventures.co.nz", "url": "https://jobs.icehouseventures.co.nz/jobs"},
+    {"name": "GD1 Careers", "domain": "careers.gd1.vc", "url": "https://careers.gd1.vc/jobs"}
   ],
   "searchUrls": [
     "https://nz.seek.com/technical-lead-jobs/in-All-Auckland",
     "https://nz.seek.com/data-architect-jobs/in-All-Auckland",
     "https://nz.seek.com/dynamics-365-solution-architect-jobs",
     "https://nz.linkedin.com/jobs/tech-lead-jobs",
-    "https://nz.linkedin.com/jobs/solutions-architect-jobs-auckland"
+    "https://nz.linkedin.com/jobs/solutions-architect-jobs-auckland",
+    "https://jobs.blackbird.vc/",
+    "https://jobs.icehouseventures.co.nz/jobs",
+    "https://careers.gd1.vc/jobs"
   ]
 }
