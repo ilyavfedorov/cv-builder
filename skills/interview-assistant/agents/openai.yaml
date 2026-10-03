@@ -1,0 +1,4 @@
+interface:
+  display_name: "Interview Assistant"
+  short_description: "Prepare, practise, and assess a job interview"
+  default_prompt: "Use $interview-assistant to prepare me for this interview and help me evaluate the company against the seven pillars."
