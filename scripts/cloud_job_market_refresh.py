@@ -198,7 +198,7 @@ Verified CV evidence:
 Search only these families: mature-platform .NET/SQL Tech Lead, Principal or Staff Engineer,
 ERP Technical Architect, Principal ERP/SQL Consultant, internal Solution Architect, and
 small-team Engineering Manager. Search every board in requiredJobBoards separately on every run:
-SEEK New Zealand (nz.seek.com), SEEK Australia (seek.com.au), and Trade Me Jobs (trademe.co.nz).
+{json.dumps(profile["requiredJobBoards"], ensure_ascii=False)}
 Use domain-targeted web searches across the target role families; do not treat searching one SEEK
 market as covering both. If a board cannot be accessed directly, search its publicly indexed job
 listings and verify details against employer career pages where possible. Never invent vacancies

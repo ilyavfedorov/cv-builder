@@ -18,6 +18,7 @@ from reportlab.platypus import (
     HRFlowable,
     ListFlowable,
     ListItem,
+    PageBreak,
     Paragraph,
     SimpleDocTemplate,
     Spacer,
@@ -95,6 +96,10 @@ def parse_markdown(source: str):
 
     while i < len(lines):
         line = lines[i].strip()
+        if line == "<!-- pagebreak -->":
+            story.append(PageBreak())
+            i += 1
+            continue
         if not line or line == "---":
             i += 1
             continue
@@ -193,4 +198,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-
