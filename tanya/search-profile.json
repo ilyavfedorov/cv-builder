@@ -67,8 +67,8 @@
     "Data Integration Engineer",
     "SQL-focused Data Engineer",
     "Research Software Engineer with data/database focus",
-    "Research Data Platform Engineer",
-    "Technical Lead for research data or software systems"
+    "Healthcare or Research Data Platform Engineer",
+    "Technical Lead or small-team Engineering Lead for healthcare, health insurance or research systems"
   ],
   "excludeByDefault": [
     "support leadership with escalation ownership",
@@ -112,20 +112,27 @@
     "https://nz.seek.com/data-engineer-jobs/in-All-Auckland",
     "https://nz.seek.com/research-software-engineer-jobs",
     "https://www.healthnz.govt.nz/careers",
-    "https://www.auckland.ac.nz/en/about-us/jobs.html"
+    "https://www.auckland.ac.nz/en/about-us/jobs.html",
+    "https://nz.seek.com/healthcare-data-jobs/in-All-Auckland",
+    "https://nz.seek.com/health-insurance-jobs/in-All-Auckland",
+    "https://nz.seek.com/neurodevelopmental-research-jobs"
   ],
   "careerFocus": {
     "confirmedDate": "2026-10-28",
-    "primaryMission": "Cancer research and the data/software infrastructure directly enabling it",
+    "primaryMission": "Cancer research, general healthcare, health insurance, and neurodivergence research or the data/software infrastructure supporting these areas",
     "allowedMissionConnections": [
       "direct cancer research",
-      "research-enabling oncology infrastructure"
+      "research-enabling oncology infrastructure",
+      "general healthcare",
+      "health insurance",
+      "neurodivergence research",
+      "research-enabling neurodivergence infrastructure"
     ],
     "missionEvidenceRequired": true,
     "salaryExceptionForVerifiedCancerResearch": true,
     "cancerResearchMinimumSalaryNzd": null,
-    "salaryExceptionDecision": "Review individually; no lower numeric floor agreed; do not invent application salary",
-    "bridgeRolePolicy": "Non-cancer roles are separate leads; acceptance not confirmed",
+    "salaryExceptionDecision": "Lower pay remains authorised for verified cancer-research roles only. General healthcare, health insurance and neurodivergence-research roles retain NZ$160,000 context until individually agreed otherwise.",
+    "bridgeRolePolicy": "General healthcare and health insurance are accepted primary targets alongside cancer and neurodivergence research. Other sectors remain separate leads.",
     "futureRoleFamilies": [
       "Data Scientist after assessed Python/statistics preparation"
     ],
@@ -133,7 +140,7 @@
   },
   "priorityEmployerSources": [
     {
-      "name": "University of Auckland cancer research ecosystem",
+      "name": "University of Auckland cancer and neurodivergence research and data platforms",
       "url": "https://www.auckland.ac.nz/en/about-us/jobs.html"
     },
     {
@@ -141,7 +148,7 @@
       "url": "https://www.cancertrialsnz.ac.nz/research/"
     },
     {
-      "name": "Health NZ cancer research/data teams",
+      "name": "Health NZ clinical, research and general healthcare data teams",
       "url": "https://www.healthnz.govt.nz/careers"
     },
     {

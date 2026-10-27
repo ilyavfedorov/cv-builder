@@ -196,10 +196,12 @@ Verified CV evidence:
 {json.dumps(cv_data, ensure_ascii=False)}
 
 Search the targetRoleFamilies in the profile; prioritise priorityEmployerSources.
-Verify direct cancer research or research-enabling oncology connection. Healthcare branding alone
-is insufficient. Set mission_connection to direct cancer research, research-enabling oncology
-infrastructure, general healthcare, unrelated, or unknown. Put source URL and concrete connection
-in mission_evidence. Unknown means Research first. Do not infer Python/pandas, modern warehouse
+Verify the role's connection to an accepted sector in careerFocus: cancer research,
+general healthcare, health insurance, or neurodivergence research/supporting infrastructure.
+General healthcare and health insurance are valid targets; do not require oncology linkage.
+Set mission_connection to a value in allowedMissionConnections, or unrelated/unknown.
+Put the supporting source URL and concrete sector/research connection in mission_evidence.
+Unknown means Research first. Do not infer Python/pandas, modern warehouse
 or scientific proficiency from software experience. Search each required board separately:
 {json.dumps(profile["requiredJobBoards"], ensure_ascii=False)}
 Use domain-targeted web searches across the target role families; do not treat searching one SEEK
@@ -209,7 +211,7 @@ to fill a source gap. Also search employer career pages, LinkedIn and reputable 
 recruiters. Australian listings must explicitly permit working from New Zealand; Australia-only
 remote work does not qualify. Deduplicate vacancies found on multiple boards.
 Location must support Auckland/North Shore with no more than 3 office
-days, remote New Zealand, or NZ-based work for an Australian organisation. Follow careerFocus salary policy: verified cancer-research roles can pay below the general floor and require individual review; no lower numeric floor is agreed. Other bridge leads retain the general floor and remain separate. Calm work is a first-class requirement. Exclude routine on-call,
+days, remote New Zealand, or NZ-based work for an Australian organisation. Follow careerFocus salary policy: verified cancer-research roles can pay below the general floor and require individual review; no lower numeric floor is agreed. Other accepted healthcare, health-insurance and neurodivergence-research roles retain the general salary floor unless Tanya approves an individual exception. Unrelated bridge leads stay separate. Calm work is a first-class requirement. Exclude routine on-call,
 escalation support, presales-heavy consulting, broad programme management and ambiguous startup
 generalist work. Do not invent salary, work mode or calm evidence; use empty strings for unknowns.
 Return only genuinely current roles with canonical source URLs. Use {today} for captured_date.
@@ -299,7 +301,7 @@ no salary, internal scoring, uncertainty or recruiter questions. Put those only 
                 "", f"{index}. {row['company']} - {row['title']} - {row['total_score_100']}/100 - {decision}",
                 f"Salary: {detail['salary_evidence'] or 'Not advertised; verification required.'}",
                 f"Location/work mode: {row['location']} / {row['work_mode'] or 'Unknown'}",
-                f"Cancer-research connection: {row.get('mission_connection', 'unknown')} | {row.get('mission_evidence', 'Not verified')}",
+                f"Healthcare/research connection: {row.get('mission_connection', 'unknown')} | {row.get('mission_evidence', 'Not verified')}",
                 f"Why it fits: {row['calm_evidence']}",
                 f"Calm-work risks: {row['calm_risks']}",
                 f"Source: {row['url']}",

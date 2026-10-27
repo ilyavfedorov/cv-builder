@@ -60,12 +60,12 @@ def score_row(row: dict[str, str], profile: dict) -> dict[str, str]:
     mission_gate = "PASS: mission filter not configured"
     if focus.get("missionEvidenceRequired"):
         if verified:
-            mission_gate = "PASS: cancer-research connection documented"
-        elif connection in ("unrelated", "general healthcare"):
-            mission_gate = "FAIL: no verified cancer-research connection for primary search"
+            mission_gate = "PASS: accepted healthcare/research connection documented"
+        elif connection == "unrelated":
+            mission_gate = "FAIL: unrelated to accepted healthcare/research sectors"
         else:
-            mission_gate = "VERIFY: cancer-research connection unknown or evidence missing"
-    if verified and focus.get("salaryExceptionForVerifiedCancerResearch"):
+            mission_gate = "VERIFY: healthcare/research connection unknown or evidence missing"
+    if verified and connection in ("direct cancer research", "research-enabling oncology infrastructure") and focus.get("salaryExceptionForVerifiedCancerResearch"):
         compensation = 8.0 if not (row.get("salary_min_nzd") or row.get("salary_max_nzd")) else 12.0
         compensation_gate = "VERIFY: cancer-research salary exception; individual review; no lower floor agreed"
     else:

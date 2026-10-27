@@ -15,3 +15,16 @@ class ResearchSalaryTests(unittest.TestCase):
         self.assertTrue(r["compensation_gate"].startswith("FAIL"));self.assertTrue(r["mission_gate"].startswith("VERIFY"))
     def test_legacy_profile_preserves_salary_floor(self):
         self.assertTrue(score_row(self.row,{"hardFilters":self.profile["hardFilters"]})["compensation_gate"].startswith("FAIL"))
+
+    def test_healthcare_is_eligible_without_cancer_connection(self):
+        self.profile["careerFocus"]["allowedMissionConnections"].append("general healthcare")
+        r=score_row(dict(self.row,salary_min_nzd="160000",salary_max_nzd="180000",mission_connection="general healthcare",mission_evidence="Official healthcare employer role"),self.profile)
+        self.assertTrue(r["mission_gate"].startswith("PASS"))
+        self.assertNotEqual(r["recommendation"],"NO GO")
+    def test_expanded_sectors_do_not_inherit_cancer_pay_exception(self):
+        for connection in ["general healthcare","health insurance","neurodivergence research","research-enabling neurodivergence infrastructure"]:
+            with self.subTest(connection=connection):
+                self.profile["careerFocus"]["allowedMissionConnections"].append(connection)
+                r=score_row(dict(self.row,mission_connection=connection,mission_evidence="Official sector/team evidence"),self.profile)
+                self.assertTrue(r["mission_gate"].startswith("PASS"))
+                self.assertTrue(r["compensation_gate"].startswith("FAIL"))
