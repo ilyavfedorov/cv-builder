@@ -120,13 +120,15 @@ def monthly(force: bool = False) -> None:
         ROOT / "tanya/search-profile.json", ROOT / "tanya/job-feed/current-jobs.csv",
         ROOT / "tanya/job-feed/scored-jobs.csv", FRAMEWORK / "recruiter-intelligence.csv",
         FRAMEWORK / "skills-gap-tracker.csv", CV_DATA,
+        FRAMEWORK / "current-search-direction.md",
+        FRAMEWORK / "application-ledger.csv", FRAMEWORK / "application-pending.csv",
     ]
     material = "\n\n".join(f"--- {p.relative_to(ROOT)} ---\n{p.read_text(encoding='utf-8-sig')}" for p in sources)
     prompt = f"""Prepare Tanya Poletaeva's monthly career-strategy review for {today:%Y-%m}.
 Use the supplied monthly template. Analyse the funnel, role families, salary evidence, calm-work risks,
 rejection reasons, recruiter intelligence, positioning and recurring gaps. Recommend Keep, Change and
 Stop. Choose at most one skill priority, and only if it appears in at least three otherwise suitable roles.
-Do not weaken salary, location or calm-work gates. Do not change search-profile.json. Unknown facts must
+Apply current search-profile.json and current-search-direction.md. Cancer-research salary flexibility is candidate-authorised; no lower numeric floor is agreed. Preserve location and calm-work gates. Do not change search-profile.json. Unknown facts must
 remain explicitly unknown. Return a complete Markdown review and a concise email summary ending with
 questions whose answers would improve or correct the review.
 

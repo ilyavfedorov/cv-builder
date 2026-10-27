@@ -4,16 +4,30 @@
     "phone": "0210490083",
     "email": "tt.korenev@gmail.com",
     "location": "Auckland, New Zealand",
-    "immigrationStatus": "New Zealand citizen"
+    "immigrationStatus": "New Zealand citizen",
+    "pronouns": "She / Her"
   },
   "careerPreferences": {
     "salaryMinimumNzd": 160000,
     "desiredMonthlyNetNzd": 10000,
-    "employmentTypes": ["permanent", "contract"],
-    "roleTypes": ["individual contributor", "principal", "management"],
+    "employmentTypes": [
+      "permanent",
+      "contract"
+    ],
+    "roleTypes": [
+      "individual contributor",
+      "principal",
+      "management"
+    ],
     "officeDaysMaximum": 3,
-    "officeLocations": ["North Shore", "Auckland CBD"],
-    "remoteLocations": ["New Zealand", "Australia"],
+    "officeLocations": [
+      "North Shore",
+      "Auckland CBD"
+    ],
+    "remoteLocations": [
+      "New Zealand",
+      "Australia"
+    ],
     "calmWorkRequirements": [
       "clear responsibilities",
       "doable workload",
@@ -28,7 +42,33 @@
       "protecting teams from overwork while remaining efficient",
       "finding people's strengths",
       "complex SQL databases and queries"
-    ]
+    ],
+    "healthAndResearchInterests": {
+      "confirmedDate": "2026-10-21",
+      "interests": [
+        "Working with data",
+        "Contributing to cancer research"
+      ],
+      "context": "Tanya confirmed Bio-Rad is a healthcare company when requesting an EY CV. Existing record supports Bio-Rad-related blood/plasma analysis software work, not direct employment details, clinical expertise, NZ health-system experience or cancer-research experience.",
+      "motivationConfirmed20261023": "Motivated by improving clinical experiences; wants to work in medical research / healthcare and serve people by actively improving their lives. Earlier Bio-Rad-related software experience is healthcare experience, not evidence of clinical practice or medical research."
+    },
+    "researchDataDirectionConfirmed20261028": {
+      "source": "Tanya direct statements, 28 October 2026",
+      "primaryMission": "Cancer research through SQL, data engineering, research software/data systems or relevant technical leadership",
+      "dataScience": "Development path; no current proficiency established",
+      "salaryException": "Open to lower pay for the right cancer-research role; no numeric lower floor agreed",
+      "bridgeRoles": "Acceptance of non-cancer bridge roles not confirmed; keep separate"
+    },
+    "missionExpansionConfirmed20261028": {
+      "source": "Tanya direct career-preference instruction, 28 October 2026",
+      "acceptedSectors": [
+        "cancer research",
+        "general healthcare",
+        "health insurance",
+        "neurodivergence research and supporting data/software systems"
+      ],
+      "scope": "Mission interests, not claimed sector-specific experience or qualifications. Existing healthy-work and location requirements remain. No new numerical salary floor agreed."
+    }
   },
   "summary": [
     "People-centred engineering and delivery leader with 20 years across software development, enterprise product delivery, implementation and team leadership.",
@@ -52,13 +92,31 @@
         "Designed a practical capability-uplift programme for C# adoption across the team.",
         "Introduced AI-assisted documentation and analysis of legacy solutions.",
         "Designed an AI-assisted performance-review workflow using Amazon Quick on desktop, configuring constrained Jira evidence retrieval for 6 team members and reducing preparation time from at least one working week to one day while personally reviewing and enriching every final review.",
-        "Guided delivery of CodeBuild pipelines intended to cut build and deployment time significantly."
+        "Guided delivery of CodeBuild pipelines intended to cut build and deployment time significantly.",
+        "Addressed recurring story carryover through individual coaching, clear end-to-end sprint expectations and two months of structured follow-up; the engineer began completing one or two stories within each sprint, with improvement sustained well beyond the follow-up period.",
+        "Uses an agent harness with the engineering team to develop and test features, with approximately one month of team use confirmed in October 2026."
       ],
       "skills": [
-        "people leadership", "delegation", "quarterly planning", "backlog shaping", "prioritisation",
-        "CI/CD modernisation", "AWS CodeBuild", "Jenkins", "C# enablement", "legacy-system analysis",
-        "AI-assisted engineering", "Amazon Quick on desktop", "Jira integration", "AI workflow design",
-        "evidence-based performance reviews", "stakeholder management", "mentoring", "team advocacy"
+        "people leadership",
+        "delegation",
+        "quarterly planning",
+        "backlog shaping",
+        "prioritisation",
+        "CI/CD modernisation",
+        "AWS CodeBuild",
+        "Jenkins",
+        "C# enablement",
+        "legacy-system analysis",
+        "AI-assisted engineering",
+        "Amazon Quick on desktop",
+        "Jira integration",
+        "AI workflow design",
+        "evidence-based performance reviews",
+        "stakeholder management",
+        "mentoring",
+        "team advocacy",
+        "agent harness",
+        "AI-assisted feature development and testing"
       ]
     },
     {
@@ -75,8 +133,17 @@
         "Supported integrations including EFTPOS NZ, Courier Post, NZ Post and Xero."
       ],
       "skills": [
-        "ERP delivery", "support leadership", "implementation management", "customer discovery", "solution design",
-        "data migration", "training", "go-live", "capacity management", "operational risk", "systems integration"
+        "ERP delivery",
+        "support leadership",
+        "implementation management",
+        "customer discovery",
+        "solution design",
+        "data migration",
+        "training",
+        "go-live",
+        "capacity management",
+        "operational risk",
+        "systems integration"
       ]
     },
     {
@@ -91,7 +158,15 @@
         "Created user guides, solution documentation and training tools for sustainable adoption.",
         "Improved implementation practices for efficiency, scalability and reliability."
       ],
-      "skills": ["ERP go-live", "workflow analysis", "requirements analysis", "change delivery", "training", "documentation", "continuous improvement"]
+      "skills": [
+        "ERP go-live",
+        "workflow analysis",
+        "requirements analysis",
+        "change delivery",
+        "training",
+        "documentation",
+        "continuous improvement"
+      ]
     },
     {
       "company": "First Software",
@@ -104,7 +179,16 @@
         "Investigated data and process issues, estimated changes and implemented agreed solutions.",
         "Triaged operational requests and identified root causes."
       ],
-      "skills": ["C#", "ASP.NET", "SQL", "JSON", "reporting", "integrations", "root-cause analysis", "estimation"]
+      "skills": [
+        "C#",
+        "ASP.NET",
+        "SQL",
+        "JSON",
+        "reporting",
+        "integrations",
+        "root-cause analysis",
+        "estimation"
+      ]
     },
     {
       "company": "Flintfox International",
@@ -119,7 +203,15 @@
         "Delivered Component Switch pricing and more than five other 200+ hour projects on schedule.",
         "Led the highest-performing team in two consecutive performance reviews."
       ],
-      "skills": ["technical leadership", "solution design", "estimation", "risk assessment", "code review", "engineering standards", "coaching"]
+      "skills": [
+        "technical leadership",
+        "solution design",
+        "estimation",
+        "risk assessment",
+        "code review",
+        "engineering standards",
+        "coaching"
+      ]
     },
     {
       "company": "Flintfox International",
@@ -133,7 +225,17 @@
         "Used SQL performance analysis to improve data integrity, product behaviour and processing efficiency.",
         "Supported developers and customer implementations across locations."
       ],
-      "skills": ["SQL", "T-SQL", "data modelling", "query performance", "pricing logic", "accrual logic", "Dynamics AX", "Dynamics 365", "X++"]
+      "skills": [
+        "SQL",
+        "T-SQL",
+        "data modelling",
+        "query performance",
+        "pricing logic",
+        "accrual logic",
+        "Dynamics AX",
+        "Dynamics 365",
+        "X++"
+      ]
     },
     {
       "company": "RAA Spectekhnika / Bio-Rad-related work",
@@ -141,13 +243,27 @@
       "from": "2006-01",
       "to": "2009-01",
       "location": "Moscow",
-      "highlights": ["Developed C#/.NET software for aviation simulator systems and blood and plasma analysis workflows."],
-      "skills": ["C#", ".NET", "technical software development"]
+      "highlights": [
+        "Developed C#/.NET software for aviation simulator systems and blood and plasma analysis workflows."
+      ],
+      "skills": [
+        "C#",
+        ".NET",
+        "technical software development"
+      ]
     }
   ],
   "education": [
-    {"qualification": "Bachelor's in Physics and Engineering", "institution": "Moscow Engineer-Physics State University", "year": 2008},
-    {"qualification": "Certificate in Software Engineering: C# .NET", "institution": "Moscow Aviation University", "year": 2006}
+    {
+      "qualification": "Bachelor's in Physics and Engineering",
+      "institution": "Moscow Engineer-Physics State University",
+      "year": 2008
+    },
+    {
+      "qualification": "Certificate in Software Engineering: C# .NET",
+      "institution": "Moscow State Technical University of Civil Aviation",
+      "year": 2006
+    }
   ],
   "certifications": [
     "Microsoft Certified Technical Specialist: .NET Framework 2.0 Application Development and Windows Applications (2008)",
@@ -156,32 +272,113 @@
     "HDInsight for Solution Architects (2017)"
   ],
   "technicalToolkit": [
-    "C#", "ASP.NET", "SQL", "T-SQL", "JSON", "APIs", "integrations", "SSRS", "X++",
-    "Dynamics AX 2009/2012", "Dynamics 365", "cloud ERP", "Azure DevOps", "AWS pipelines", "CI/CD", "Jenkins",
-    "Amazon Quick on desktop", "Jira"
+    "C#",
+    "ASP.NET",
+    "SQL",
+    "T-SQL",
+    "JSON",
+    "APIs",
+    "integrations",
+    "SSRS",
+    "X++",
+    "Dynamics AX 2009/2012",
+    "Dynamics 365",
+    "cloud ERP",
+    "Azure DevOps",
+    "AWS pipelines",
+    "CI/CD",
+    "Jenkins",
+    "Amazon Quick on desktop",
+    "Jira",
+    "stored procedures",
+    "window functions",
+    "CTEs",
+    "recursive queries"
   ],
   "interestRatings": [
-    {"item": "Writing queries in SQL", "interest": 9, "skill": 9},
-    {"item": "Analyzing patterns at work", "interest": 9, "skill": 8},
-    {"item": "Leading the team", "interest": 9, "skill": 8},
-    {"item": "Strategic planning and choice", "interest": 9, "skill": 7},
-    {"item": "Solving complex work challenges", "interest": 7, "skill": 7},
-    {"item": "Programming in C#", "interest": 4, "skill": 7},
-    {"item": "Composing music in Flat", "interest": 9, "skill": 6},
-    {"item": "Producing music in Reaper", "interest": 8, "skill": 4},
-    {"item": "Playing piano", "interest": 6, "skill": 5},
-    {"item": "Playing accordion", "interest": 7, "skill": 1}
+    {
+      "item": "Writing queries in SQL",
+      "interest": 9,
+      "skill": 9
+    },
+    {
+      "item": "Analyzing patterns at work",
+      "interest": 9,
+      "skill": 8
+    },
+    {
+      "item": "Leading the team",
+      "interest": 9,
+      "skill": 8
+    },
+    {
+      "item": "Strategic planning and choice",
+      "interest": 9,
+      "skill": 7
+    },
+    {
+      "item": "Solving complex work challenges",
+      "interest": 7,
+      "skill": 7
+    },
+    {
+      "item": "Programming in C#",
+      "interest": 4,
+      "skill": 7
+    },
+    {
+      "item": "Composing music in Flat",
+      "interest": 9,
+      "skill": 6
+    },
+    {
+      "item": "Producing music in Reaper",
+      "interest": 8,
+      "skill": 4
+    },
+    {
+      "item": "Playing piano",
+      "interest": 6,
+      "skill": 5
+    },
+    {
+      "item": "Playing accordion",
+      "interest": 7,
+      "skill": 1
+    }
   ],
   "developmentEvidence": {
     "strengthsFromManager": [
-      "empathetic and inspiring people leadership", "approachability and openness to feedback",
-      "team advocacy and delegation", "relationship building and influence", "proactive planning and team alignment"
+      "empathetic and inspiring people leadership",
+      "approachability and openness to feedback",
+      "team advocacy and delegation",
+      "relationship building and influence",
+      "proactive planning and team alignment"
     ],
     "growthAreas": [
       "deepen technical understanding of the current product and system architecture",
       "set and uphold delivery expectations consistently",
       "minimise work in progress and improve estimation accuracy",
       "understand and apply DORA metrics"
-    ]
+    ],
+    "aiPracticeConfirmed20261022": {
+      "source": "Tanya direct statement, 22 October 2026",
+      "teamPractice": "Tanya and her team have used an agent harness to develop and test features for about a month.",
+      "personalPractice": "Uses AI extensively to prepare presentations, plans, backlogs and roadmaps.",
+      "boundaries": "Harness product, exact adoption date, degree of rollout ownership, autonomous release capability, adoption metrics and measured delivery gains not confirmed."
+    },
+    "dataSkillsConfirmed20261028": {
+      "source": "Tanya direct statement, 28 October 2026",
+      "pythonPandas": "No previous Python/pandas work; crash course requested but not begun",
+      "sqlRecency": "Self-described as rusty; substantial historical hands-on experience",
+      "sqlEvidence": "Developed pricing and accrual stored procedures with window functions, complex SELECTs, UPDATEs, data manipulation, CTEs and recursion",
+      "boundaries": "Exact dates and employer attribution of newly supplied SQL specifics not reconfirmed; no universal mastery or new metric claimed"
+    }
+  },
+  "applicationDefaults": {
+    "confirmedDate": "2026-10-22",
+    "previousXeroEmployment": false,
+    "standardCreditAndCriminalCheckConsent": true,
+    "consentScope": "Standing consent to standard employer credit/criminal checks for job applications. Not a declaration about findings, and not approval of extra bundled commitments or final submission."
   }
 }

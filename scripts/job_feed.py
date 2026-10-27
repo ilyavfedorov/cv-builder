@@ -54,16 +54,31 @@ def location_score(row: dict[str, str], profile: dict) -> tuple[float, str]:
 
 def score_row(row: dict[str, str], profile: dict) -> dict[str, str]:
     hard = profile["hardFilters"]
-    compensation, compensation_gate = compensation_score(
-        row, float(hard["preferredSalaryNzd"]), float(hard["minimumSalaryNzd"])
-    )
+    focus = profile.get("careerFocus", {})
+    connection = row.get("mission_connection", "").strip().lower()
+    verified = connection in focus.get("allowedMissionConnections", []) and bool(row.get("mission_evidence", "").strip())
+    mission_gate = "PASS: mission filter not configured"
+    if focus.get("missionEvidenceRequired"):
+        if verified:
+            mission_gate = "PASS: accepted healthcare/research connection documented"
+        elif connection == "unrelated":
+            mission_gate = "FAIL: unrelated to accepted healthcare/research sectors"
+        else:
+            mission_gate = "VERIFY: healthcare/research connection unknown or evidence missing"
+    if verified and connection in ("direct cancer research", "research-enabling oncology infrastructure") and focus.get("salaryExceptionForVerifiedCancerResearch"):
+        compensation = 8.0 if not (row.get("salary_min_nzd") or row.get("salary_max_nzd")) else 12.0
+        compensation_gate = "VERIFY: cancer-research salary exception; individual review; no lower floor agreed"
+    else:
+        compensation, compensation_gate = compensation_score(
+            row, float(hard["preferredSalaryNzd"]), float(hard["minimumSalaryNzd"])
+        )
     location, location_gate = location_score(row, profile)
     skills = bounded_score(row.get("skills_fit_0_5", "")) * 6
     calm = bounded_score(row.get("calm_fit_0_5", "")) * 6
     energy = bounded_score(row.get("energy_fit_0_5", "")) * 2
     total = round(skills + calm + energy + compensation + location, 1)
-    hard_fail = compensation_gate.startswith("FAIL") or location_gate.startswith("FAIL")
-    recommendation = "NO GO" if hard_fail else ("PRIORITY" if total >= 78 else "RESEARCH" if total >= 62 else "HOLD")
+    hard_fail = compensation_gate.startswith("FAIL") or location_gate.startswith("FAIL") or mission_gate.startswith("FAIL")
+    recommendation = "NO GO" if hard_fail else ("RESEARCH" if focus.get("missionEvidenceRequired") else ("PRIORITY" if total >= 78 else "RESEARCH" if total >= 62 else "HOLD"))
     result = dict(row)
     result.update(
         {
@@ -74,6 +89,7 @@ def score_row(row: dict[str, str], profile: dict) -> dict[str, str]:
             "energy_score_10": f"{energy:.1f}",
             "total_score_100": f"{total:.1f}",
             "compensation_gate": compensation_gate,
+            "mission_gate": mission_gate,
             "location_gate": location_gate,
             "recommendation": recommendation,
         }

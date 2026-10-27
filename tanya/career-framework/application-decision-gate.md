@@ -1,3 +1,5 @@
+> Current override: `current-search-direction.md`, 28 October 2026. Cancer-research roles have case-by-case pay flexibility; older absolute-floor and general leadership priority below are historical.
+
 # Application decision gate
 
 Complete this before investing in a tailored CV or interview preparation.

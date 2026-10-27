@@ -1,13 +1,27 @@
 {
   "candidate": "Tanya Poletaeva",
-  "marketDate": "2026-08-30",
+  "marketDate": "2026-10-28",
   "hardFilters": {
     "minimumSalaryNzd": 160000,
-    "preferredSalaryNzd": 170000,
+    "preferredSalaryNzd": 180000,
     "maximumOfficeDays": 3,
-    "allowedOfficeAreas": ["North Shore", "Auckland CBD", "Auckland"],
-    "allowedRemoteMarkets": ["New Zealand", "Australia"],
-    "employmentTypes": ["permanent", "contract"]
+    "allowedOfficeAreas": [
+      "North Shore",
+      "Auckland CBD",
+      "Auckland"
+    ],
+    "allowedRemoteMarkets": [
+      "New Zealand",
+      "Australia"
+    ],
+    "employmentTypes": [
+      "permanent",
+      "contract"
+    ],
+    "salaryRangeContextNzd": [
+      160000,
+      200000
+    ]
   },
   "weights": {
     "skillsFit": 30,
@@ -17,38 +31,137 @@
     "energyFit": 10
   },
   "calmPositiveSignals": [
-    "clear ownership", "mature platform", "small team", "stable organisation", "flexible hours",
-    "work-life balance", "autonomy", "focused", "well-defined", "4.5 day week", "no on-call"
+    "clear ownership",
+    "mature platform",
+    "small team",
+    "stable organisation",
+    "flexible hours",
+    "work-life balance",
+    "autonomy",
+    "focused",
+    "well-defined",
+    "4.5 day week",
+    "no on-call"
   ],
   "calmRiskSignals": [
-    "on-call", "incident response", "triage", "high-growth", "fast-paced", "wear many hats",
-    "competing priorities", "customer escalations", "presales", "workshops", "travel", "greenfield",
-    "high-visibility", "multiple squads", "service ownership", "24/7", "startup"
+    "on-call",
+    "incident response",
+    "triage",
+    "high-growth",
+    "fast-paced",
+    "wear many hats",
+    "competing priorities",
+    "customer escalations",
+    "presales",
+    "workshops",
+    "travel",
+    "greenfield",
+    "high-visibility",
+    "multiple squads",
+    "service ownership",
+    "24/7",
+    "startup"
   ],
   "targetRoleFamilies": [
-    "Tech Lead - .NET/SQL", "ERP Technical Architect", "Solution Architect",
-    "Principal ERP/SQL Consultant", "Staff Engineer - .NET/SQL", "Engineering Manager - mature product"
+    "SQL Developer / Database Developer",
+    "Data Integration Engineer",
+    "SQL-focused Data Engineer",
+    "Research Software Engineer with data/database focus",
+    "Healthcare or Research Data Platform Engineer",
+    "Technical Lead or small-team Engineering Lead for healthcare, health insurance or research systems"
   ],
   "excludeByDefault": [
-    "support leadership with escalation ownership", "site reliability/on-call", "presales-heavy architecture",
-    "programme management across many workstreams", "early-stage startup generalist"
+    "support leadership with escalation ownership",
+    "site reliability/on-call",
+    "presales-heavy architecture",
+    "programme management across many workstreams",
+    "early-stage startup generalist"
   ],
   "requiredJobBoards": [
-    {"name": "SEEK New Zealand", "domain": "nz.seek.com"},
-    {"name": "SEEK Australia", "domain": "seek.com.au"},
-    {"name": "Trade Me Jobs", "domain": "trademe.co.nz", "section": "Jobs"},
-    {"name": "Blackbird Jobs", "domain": "jobs.blackbird.vc", "url": "https://jobs.blackbird.vc/"},
-    {"name": "Icehouse Ventures Jobs", "domain": "jobs.icehouseventures.co.nz", "url": "https://jobs.icehouseventures.co.nz/jobs"},
-    {"name": "GD1 Careers", "domain": "careers.gd1.vc", "url": "https://careers.gd1.vc/jobs"}
+    {
+      "name": "SEEK New Zealand",
+      "domain": "nz.seek.com"
+    },
+    {
+      "name": "SEEK Australia",
+      "domain": "seek.com.au"
+    },
+    {
+      "name": "Trade Me Jobs",
+      "domain": "trademe.co.nz",
+      "section": "Jobs"
+    },
+    {
+      "name": "Blackbird Jobs",
+      "domain": "jobs.blackbird.vc",
+      "url": "https://jobs.blackbird.vc/"
+    },
+    {
+      "name": "Icehouse Ventures Jobs",
+      "domain": "jobs.icehouseventures.co.nz",
+      "url": "https://jobs.icehouseventures.co.nz/jobs"
+    },
+    {
+      "name": "GD1 Careers",
+      "domain": "careers.gd1.vc",
+      "url": "https://careers.gd1.vc/jobs"
+    }
   ],
   "searchUrls": [
-    "https://nz.seek.com/technical-lead-jobs/in-All-Auckland",
-    "https://nz.seek.com/data-architect-jobs/in-All-Auckland",
-    "https://nz.seek.com/dynamics-365-solution-architect-jobs",
-    "https://nz.linkedin.com/jobs/tech-lead-jobs",
-    "https://nz.linkedin.com/jobs/solutions-architect-jobs-auckland",
-    "https://jobs.blackbird.vc/",
-    "https://jobs.icehouseventures.co.nz/jobs",
-    "https://careers.gd1.vc/jobs"
+    "https://nz.seek.com/sql-developer-jobs/in-All-Auckland",
+    "https://nz.seek.com/data-engineer-jobs/in-All-Auckland",
+    "https://nz.seek.com/research-software-engineer-jobs",
+    "https://www.healthnz.govt.nz/careers",
+    "https://www.auckland.ac.nz/en/about-us/jobs.html",
+    "https://nz.seek.com/healthcare-data-jobs/in-All-Auckland",
+    "https://nz.seek.com/health-insurance-jobs/in-All-Auckland",
+    "https://nz.seek.com/neurodevelopmental-research-jobs"
+  ],
+  "careerFocus": {
+    "confirmedDate": "2026-10-28",
+    "primaryMission": "Cancer research, general healthcare, health insurance, and neurodivergence research or the data/software infrastructure supporting these areas",
+    "allowedMissionConnections": [
+      "direct cancer research",
+      "research-enabling oncology infrastructure",
+      "general healthcare",
+      "health insurance",
+      "neurodivergence research",
+      "research-enabling neurodivergence infrastructure"
+    ],
+    "missionEvidenceRequired": true,
+    "salaryExceptionForVerifiedCancerResearch": true,
+    "cancerResearchMinimumSalaryNzd": null,
+    "salaryExceptionDecision": "Lower pay remains authorised for verified cancer-research roles only. General healthcare, health insurance and neurodivergence-research roles retain NZ$160,000 context until individually agreed otherwise.",
+    "bridgeRolePolicy": "General healthcare and health insurance are accepted primary targets alongside cancer and neurodivergence research. Other sectors remain separate leads.",
+    "futureRoleFamilies": [
+      "Data Scientist after assessed Python/statistics preparation"
+    ],
+    "skillsBoundary": "No Python/pandas; SQL historically strong but rusty; no established modern warehouse or oncology delivery expertise"
+  },
+  "priorityEmployerSources": [
+    {
+      "name": "University of Auckland cancer and neurodivergence research and data platforms",
+      "url": "https://www.auckland.ac.nz/en/about-us/jobs.html"
+    },
+    {
+      "name": "Cancer Trials NZ",
+      "url": "https://www.cancertrialsnz.ac.nz/research/"
+    },
+    {
+      "name": "Health NZ clinical, research and general healthcare data teams",
+      "url": "https://www.healthnz.govt.nz/careers"
+    },
+    {
+      "name": "Malaghan Institute",
+      "url": "https://www.malaghan.org.nz/our-people/work-with-us"
+    },
+    {
+      "name": "Garvan research data platforms",
+      "url": "https://www.garvan.org.au/research/platforms/data-science"
+    },
+    {
+      "name": "Peter MacCallum Cancer Centre",
+      "url": "https://www.petermac.org/careers/careers-at-peter-mac"
+    }
   ]
 }
