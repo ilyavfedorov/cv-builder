@@ -58,3 +58,12 @@ Evidence to strengthen: retention, engagement, delivery predictability, capabili
 
 Choose the brief that matches the job's primary outcome. Use a secondary brief for supporting evidence, but do not combine all three into an unfocused summary.
 
+
+
+## SQL and data engineering for research
+
+Lead with complex SQL/T-SQL, pricing/accrual stored procedures, window functions, CTEs/recursion, data modelling/performance, migrations and integrations. Preserve historical roles/dates. Research contribution is motivation, not oncology experience. No Python/pandas/modern warehouse expertise claims.
+
+## Technical leadership for research data systems
+
+Lead with current six-engineer leadership, standards, CI/CD, coaching and enterprise SQL/data. Do not imply previous management of scientists, specialist data-platform teams or research programmes.

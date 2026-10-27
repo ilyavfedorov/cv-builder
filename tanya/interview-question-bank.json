@@ -1,0 +1,335 @@
+{
+  "version": 1,
+  "candidate": "Tanya Poletaeva",
+  "interviews": [
+    {
+      "id": "kernel-engineering-manager-recruiter",
+      "opportunity": "2026-09-15 kernel-engineering-manager - RESEARCH FIRST",
+      "company": "Kernel Wealth",
+      "role": "Engineering Manager",
+      "stage": "Recruiter interview",
+      "interviewerName": "Nicola",
+      "interviewerRole": "Recruiter",
+      "date": null
+    },
+    {
+      "id": "kernel-engineering-manager-cto",
+      "opportunity": "2026-09-15 kernel-engineering-manager - RESEARCH FIRST",
+      "company": "Kernel Wealth",
+      "role": "Engineering Manager",
+      "stage": "CTO interview",
+      "interviewerName": "Sam Williams",
+      "interviewerRole": "CTO",
+      "date": null
+    }
+  ],
+  "questions": [
+    {
+      "id": "kernel-recruiter-difficult-performance-conversation",
+      "interviewId": "kernel-engineering-manager-recruiter",
+      "questionOriginal": "Tell me about the time that you had to have difficult performance conversation with your subordinate, and how you handled it, and what was the outcome?",
+      "answerGiven": "I am lucky to work with very talented and hard-working people, but there was one case which could be an example of difficult conversation. When I first arrived to Gentrack, I observed people first, not jumping to conclusions. I have noticed one team member, which was consistently underdelivering. Stories gets dragged from sprint to sprint, for one or another reason. I have prepared for the conversation, and took him out for a walk. During the walk I have asked how is he doing and what are the challenges. He replied, and then I said, I have observed that you are able to create much more than you're doing right now. Can you think about what stops you from doing your best work? He said that changing teams every few months was quite demotivating, along with the feeling that other team members monopolize all the interesting work. I offered him assistance with going through work and choosing bigger, more interesting features and claiming it for him, if he is able to deliver on time. Also went through team stability chances - we were going to be one team for longer period of time. Then had more heart to heart conversation about how things are at the moment. It really helped, as after that he started taking bigger and consistent features, and assist others with work much more, being active in Slack channels, etc. I think that was not easy conversation, but it helped a lot",
+      "additionalDetailConfirmed": "Tanya agreed that the engineer would own challenging, bounded stories such as a small feature end to end within a sprint. She followed up for two months with consistent check-ins, completed-work review and explicit feedback during every second one-to-one. He began completing one or two stories within each sprint; Tanya confirmed on 11 October 2026 that the improvement continued well beyond the two-month follow-up. Exact longer duration and baseline throughput are not established.",
+      "likelyIntent": [
+        "ability to address underperformance directly",
+        "diagnosis before judgement",
+        "balance of empathy and accountability",
+        "setting expectations and following through",
+        "observable improvement after intervention"
+      ],
+      "evidenceReferences": [
+        "candidate-provided interview recollection",
+        "cv-data.json workExperience[0].highlights[0]",
+        "cv-data.json workExperience[0].highlights[1]",
+        "cv-data.json developmentEvidence.strengthsFromManager"
+      ],
+      "coaching": {
+        "strengths": [
+          "uses a specific and relevant management example",
+          "shows observation and curiosity before judgement",
+          "uncovers structural causes of disengagement",
+          "connects the intervention to visible behavioural improvement"
+        ],
+        "risks": [
+          "the opening delays the direct answer",
+          "the performance gap and expected standard are not stated crisply",
+          "the answer as originally delivered omitted the established follow-up cadence",
+          "allocating more interesting work could sound like rewarding underperformance unless framed as accountable ownership"
+        ],
+        "efficientOutline": [
+          "State the performance pattern and why it mattered",
+          "Explain that Tanya observed before concluding and prepared evidence",
+          "Describe the private conversation: direct observation, open question and root cause",
+          "Describe the agreement: meaningful ownership paired with reliable delivery expectations",
+          "Close with observable changes in ownership, consistency and team contribution"
+        ],
+        "suggestedAnswer": "When I joined Gentrack, I noticed one engineer's stories repeatedly carrying over between sprints. I observed the pattern before having a private conversation to understand what was getting in the way. He described demotivation from frequent team changes and limited access to interesting work. We agreed that he would own challenging, bounded stories, such as a small feature, and see them through end to end within a sprint. I followed up for two months through consistent check-ins, reviewing completed work and providing explicit feedback. He began completing one or two stories within each sprint, and the improvement continued well beyond that follow-up period. This reinforced that empathy and accountability work together: understand the barriers, agree a clear expectation and follow through on actual delivery.",
+        "claimBoundaries": [
+          "Historical answerGiven is unchanged; these are later candidate-confirmed details.",
+          "No baseline throughput or percentage improvement established.",
+          "No exact duration beyond two months established.",
+          "Formal performance escalation is a hypothetical preparation topic, not claimed experience."
+        ]
+      },
+      "tags": [
+        "performance management",
+        "underperformance",
+        "coaching",
+        "motivation",
+        "accountability",
+        "psychological safety"
+      ]
+    },
+    {
+      "id": "kernel-recruiter-leadership-style",
+      "interviewId": "kernel-engineering-manager-recruiter",
+      "questionOriginal": "How would you describe your leadership style?",
+      "answerGiven": "Empathetic, finding the cause that motivates people, finding where people can do their best work. Challenging where necessary, providing clear expectations, with strong focus to assist with removing blockers to do their best work.",
+      "likelyIntent": [
+        "leadership self-awareness",
+        "fit with the company's management culture",
+        "balance between support and accountability",
+        "ability to adapt leadership to individuals",
+        "clarity about day-to-day management behaviour"
+      ],
+      "evidenceReferences": [
+        "cv-data.json workExperience[0].highlights[0]",
+        "cv-data.json workExperience[0].highlights[1]",
+        "cv-data.json workExperience[0].highlights[2]",
+        "cv-data.json workExperience[0].highlights[4]",
+        "cv-data.json developmentEvidence.strengthsFromManager",
+        "kernel-recruiter-difficult-performance-conversation"
+      ],
+      "coaching": {
+        "strengths": [
+          "authentically reflects Tanya's people-centred leadership",
+          "includes both empathy and challenge",
+          "recognises motivation and blockers as management responsibilities",
+          "mentions clear expectations rather than support alone"
+        ],
+        "risks": [
+          "the original answer is a list of traits rather than a clear leadership model",
+          "it gives no observable example of how the style appears in practice",
+          "the phrase finding the cause that motivates people may sound as though motivation is something a manager can manufacture",
+          "accountability and follow-through are less prominent than support"
+        ],
+        "efficientOutline": [
+          "Name the style: people-centred, clear and adaptable",
+          "Explain three behaviours: understand the person, establish ownership and expectations, remove blockers while following through",
+          "Give one brief proof point from current leadership",
+          "Close with the intended result for people and delivery"
+        ],
+        "suggestedAnswer": "I would describe my leadership style as people-centred, clear and adaptable. I invest time in understanding what motivates each person and where their strengths can create the most value, but I pair that with clear expectations, meaningful ownership and regular feedback. My role is to remove systemic blockers and provide support, while still challenging people and following through on commitments. In my current team, that approach has helped build stronger knowledge sharing and collaboration, while consistent check-ins have helped individuals take greater ownership of delivery. I want people to feel trusted and supported, but also to understand clearly what good performance looks like."
+      },
+      "tags": [
+        "leadership style",
+        "people leadership",
+        "motivation",
+        "delegation",
+        "accountability",
+        "feedback",
+        "blocker removal"
+      ]
+    },
+    {
+      "id": "kernel-cto-meaning-of-leadership",
+      "interviewId": "kernel-engineering-manager-cto",
+      "questionOriginal": "What does leadership mean to you?",
+      "answerGiven": "It is gentle but firm and clear guidance, also assistance.",
+      "candidateReflection": "Tanya felt caught off guard by the breadth of the question.",
+      "likelyIntent": [
+        "underlying leadership philosophy",
+        "distinction between leadership and task management",
+        "ability to create clarity and alignment",
+        "approach to autonomy and accountability",
+        "understanding of leadership through the success of others"
+      ],
+      "evidenceReferences": [
+        "cv-data.json workExperience[0].highlights[0]",
+        "cv-data.json workExperience[0].highlights[1]",
+        "cv-data.json workExperience[0].highlights[2]",
+        "cv-data.json workExperience[0].highlights[4]",
+        "cv-data.json careerPreferences.energisingWork",
+        "cv-data.json developmentEvidence.strengthsFromManager"
+      ],
+      "coaching": {
+        "strengths": [
+          "recognises that leadership combines care with firmness",
+          "values clarity and practical support",
+          "is consistent with Tanya's empathetic leadership evidence"
+        ],
+        "risks": [
+          "the answer is too abstract to reveal a leadership philosophy",
+          "guidance and assistance may imply that the leader directs and rescues rather than enabling ownership",
+          "it omits shared purpose, decision clarity, accountability and development",
+          "it does not define how success should be visible in the team"
+        ],
+        "efficientOutline": [
+          "Define leadership as creating conditions for collective success",
+          "Name the leader's responsibilities: purpose, priorities, decision boundaries and standards",
+          "Explain how the leader enables people: trust, coaching, blocker removal and honest feedback",
+          "Clarify that leadership builds ownership rather than dependence",
+          "Define success as a capable team delivering sustainably without needing the leader in every decision"
+        ],
+        "suggestedAnswer": "To me, leadership means creating the conditions in which people can do strong work together. That starts with a clear purpose, priorities, decision boundaries and an honest definition of good performance. It also means understanding people's strengths, giving them meaningful ownership, removing systemic blockers and providing direct feedback when expectations are not being met. I do not see leadership as making every decision or solving every problem for the team. It is about helping people build the confidence and judgement to act independently while knowing support is available. I consider leadership successful when the team delivers sustainably, people grow, and progress does not depend on the leader being involved in every detail."
+      },
+      "tags": [
+        "leadership philosophy",
+        "clarity",
+        "autonomy",
+        "accountability",
+        "coaching",
+        "sustainable delivery",
+        "team ownership"
+      ]
+    },
+    {
+      "id": "kernel-cto-manager-rating-history",
+      "interviewId": "kernel-engineering-manager-cto",
+      "questionOriginal": "Let's go through your current manager and back into the past. Supply a name and a rating from 1 to 10: if I were to contact them, how would they rate you?",
+      "answerGiven": "Tanya supplied manager names and ratings. She rated the likely assessment from her current manager as 7 out of 10 and continued through previous managers. She did not disclose her current conflict with her manager.",
+      "answerCompleteness": "Partial recollection; the other ratings and any follow-up discussion have not been captured.",
+      "candidateReflection": "Tanya found the question very uncomfortable and did not understand what Sam intended to learn from it.",
+      "additionalDetailConfirmed": "Sam described the exercise as hypothetical and explicitly said that he would contact a manager only with Tanya's permission.",
+      "likelyIntent": [
+        "self-awareness and calibration",
+        "candour about strengths and weaknesses",
+        "coachability and use of feedback",
+        "consistency across management relationships",
+        "perceived reference risk",
+        "response under interpersonal pressure"
+      ],
+      "evidenceReferences": [
+        "cv-data.json developmentEvidence.strengthsFromManager",
+        "cv-data.json developmentEvidence.growthAreas",
+        "cv-data.json workExperience[0].highlights[0]",
+        "cv-data.json workExperience[0].highlights[1]",
+        "candidate-provided interview recollection"
+      ],
+      "coaching": {
+        "strengths": [
+          "Tanya answered rather than becoming defensive",
+          "a 7 out of 10 rating can signal realistic self-calibration",
+          "Tanya did not volunteer a sensitive current conflict that was not necessary to answer the question"
+        ],
+        "risks": [
+          "a bare number allows the interviewer to invent the explanation",
+          "supplying names can initially feel like implied permission to contact people, although Sam explicitly clarified that contact required Tanya's permission",
+          "rating relationships from memory encourages false precision",
+          "discomfort may make the answer sound hesitant or guarded"
+        ],
+        "efficientOutline": [
+          "Acknowledge that the number is an estimate rather than a fact",
+          "Give the rating directly",
+          "Ground it in specific positive feedback",
+          "Name one or two genuine development areas and how Tanya is addressing them",
+          "State that any reference contact requires explicit agreement at the appropriate stage"
+        ],
+        "suggestedAnswer": "For my current manager, I would estimate around 7 out of 10, although I would rather ground that in actual feedback than pretend the number is precise. They have recognised my empathetic people leadership, team advocacy, delegation, relationship building and proactive planning. They have also challenged me to deepen my understanding of the current product architecture, uphold delivery expectations consistently, reduce work in progress and improve estimation. I think that is a fair assessment, and I have been actively working on those areas. I can give you the same evidence-based view for previous managers. I am also happy to agree appropriate referees later in the process, but I would want any contact to happen only with my explicit confirmation."
+      },
+      "companyAssessmentSignal": {
+        "pillar": "Trust and psychological safety",
+        "signal": "The question used a high-pressure hypothetical involving named managers and numerical ratings.",
+        "interpretation": "A demanding self-calibration exercise that created discomfort, but Sam explicitly preserved Tanya's reference-contact boundary. This is not negative evidence of Kernel's psychological safety by itself.",
+        "followUp": "No reference-boundary follow-up is required unless the company later requests actual referee contact."
+      },
+      "tags": [
+        "self-awareness",
+        "manager feedback",
+        "coachability",
+        "reference boundaries",
+        "pressure question",
+        "psychological safety"
+      ],
+      "subsequentFeedback": [
+        {
+          "reportedDate": "2026-10-21",
+          "source": "Tanya reporting Kernel feedback",
+          "employerFeedback": "Positive overall assessment, with a concern about insufficient experience talking to executives.",
+          "candidateClarification": "Predicted higher ratings from technical managers and lower ratings from non-technical managers in the hypothetical bosses exercise.",
+          "candidateInterpretation": "The contrast in predicted ratings contributed to the executive-communication impression.",
+          "claimBoundaries": "Exact scores and verbatim feedback unconfirmed; Kernel explicitly attributing the concern to this exercise is not established. Final hiring outcome not confirmed.",
+          "preparationPriority": "Show verified communication with non-technical decision-makers; practise business outcomes, options, risks and recommendations, and contextualise manager ratings honestly."
+        },
+        {
+          "reportedDate": "2026-10-28",
+          "source": "Tanya direct clarification of employer feedback",
+          "employerConfirmation": "Kernel explicitly confirmed the boss test (hypothetical manager-rating exercise) led to its executive-communication concern.",
+          "claimBoundaries": "Earlier outcome-unknown and causal-link-unconfirmed notes are superseded. Exact verbatim feedback and individual ratings remain unrecorded."
+        }
+      ]
+    },
+    {
+      "id": "kernel-cto-strengths-and-weaknesses",
+      "interviewId": "kernel-engineering-manager-cto",
+      "questionOriginal": "What are you good at in your work? What are you not good at?",
+      "answerGiven": "I think I am good at finding patterns across complex systems with high uncertainty, using an accounting-postings example; I am passionate about the people I lead; I am good at developing people's careers, onboarding, and explaining until they understand at a deeper level. I am not good at challenging people too much, regularly working overtime, or working with companies without work-life balance. I wanted to be explicit about that. I believe people do their best work when they are motivated and challenged, but held to achievable expectations.",
+      "additionalDetailConfirmed": "Tanya explicitly said she is not good at working with people who consistently overwork, take pride in doing so, and raise the implicit performance bar for others to an unachievable level.",
+      "answerCompleteness": "The accounting-postings example was referenced but its details have not yet been captured.",
+      "likelyIntent": [
+        "self-awareness and prioritisation of strengths",
+        "relevance of strengths to the Engineering Manager role",
+        "candour about genuine development areas",
+        "ability to learn and mitigate weaknesses",
+        "fit with the company's performance expectations"
+      ],
+      "evidenceReferences": [
+        "cv-data.json workExperience[5].highlights[0]",
+        "cv-data.json workExperience[5].highlights[2]",
+        "cv-data.json workExperience[0].highlights[0]",
+        "cv-data.json workExperience[0].highlights[4]",
+        "cv-data.json interestRatings",
+        "cv-data.json developmentEvidence.strengthsFromManager",
+        "cv-data.json developmentEvidence.growthAreas",
+        "candidate-provided accounting-postings example pending detail"
+      ],
+      "coaching": {
+        "strengths": [
+          "identifies a distinctive combination of systems thinking and people development",
+          "connects technical pattern recognition with uncertainty",
+          "shows commitment to onboarding and deep understanding rather than superficial instruction",
+          "states a clear belief in achievable expectations and sustainable performance"
+        ],
+        "risks": [
+          "too many strengths are listed without prioritising the most role-relevant two",
+          "not challenging people too much is ambiguous and may be heard as avoiding accountability",
+          "overtime and poor work-life balance are environmental boundaries rather than capability weaknesses",
+          "saying she is not good at working with chronic overworkers may sound like an inability to manage high performers unless she distinguishes high standards from unsustainable heroics",
+          "the answer does not explain how Tanya is improving a genuine development area"
+        ],
+        "efficientOutline": [
+          "Name two connected strengths: systems pattern recognition and people development",
+          "Give one short proof point for each",
+          "Name a genuine shadow side: empathy can delay an explicit challenge",
+          "Explain the management practice used to address it",
+          "State sustainable-work expectations separately as a condition for good performance, not as a weakness"
+        ],
+        "suggestedAnswer": "My strongest combination is systems thinking and people development. I am good at finding patterns across complex systems where the problem is uncertainâ€”for example, tracing accounting postings and connected rules until I can explain the underlying behaviour clearly. On the people side, I am particularly strong at onboarding, understanding individual strengths and helping people build deeper capability rather than simply giving them instructions. One area I have had to develop is challenging performance early enough. My instinct is to understand and support the person first, which can sometimes delay an explicit conversation about expectations. I now address that by naming the observed gap, agreeing achievable outcomes and using regular check-ins and feedback. I also care strongly about sustainable performance. I find it challenging when chronic overtime is celebrated as a virtue and becomes an implicit, unachievable standard for everyone else. I value high standards and will support exceptional effort when genuinely necessary, but I do not believe heroics should become the normal operating model or substitute for prioritisation and realistic planning."
+      },
+      "tags": [
+        "strengths",
+        "development areas",
+        "systems thinking",
+        "pattern recognition",
+        "people development",
+        "onboarding",
+        "performance challenge",
+        "sustainable work",
+        "hero culture",
+        "achievable expectations"
+      ]
+    }
+  ],
+  "outcomes": [
+    {
+      "company": "Kernel Wealth",
+      "role": "Engineering Manager",
+      "reportedDate": "2026-10-28",
+      "outcome": "Rejected",
+      "source": "Tanya direct statement",
+      "reasonReported": "Insufficient executive-communication experience",
+      "claimBoundary": "Two documented meetings are stages of one process. Exact verbatim employer wording and individual ratings are not recorded.",
+      "employerConfirmedBasis": "Tanya confirmed Kernel explicitly linked the executive-communication concern to the boss test."
+    }
+  ]
+}

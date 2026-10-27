@@ -34,7 +34,7 @@ CURRENT_FIELDS = [
     "captured_date", "source", "company", "title", "location", "work_mode",
     "employment_type", "salary_min_nzd", "salary_max_nzd", "url",
     "skills_fit_0_5", "calm_fit_0_5", "energy_fit_0_5", "calm_evidence",
-    "calm_risks", "status",
+    "calm_risks", "status", "mission_connection", "mission_evidence",
 ]
 
 SEARCH_SCHEMA = {
@@ -195,9 +195,12 @@ Candidate profile and rules:
 Verified CV evidence:
 {json.dumps(cv_data, ensure_ascii=False)}
 
-Search only these families: mature-platform .NET/SQL Tech Lead, Principal or Staff Engineer,
-ERP Technical Architect, Principal ERP/SQL Consultant, internal Solution Architect, and
-small-team Engineering Manager. Search every board in requiredJobBoards separately on every run:
+Search the targetRoleFamilies in the profile; prioritise priorityEmployerSources.
+Verify direct cancer research or research-enabling oncology connection. Healthcare branding alone
+is insufficient. Set mission_connection to direct cancer research, research-enabling oncology
+infrastructure, general healthcare, unrelated, or unknown. Put source URL and concrete connection
+in mission_evidence. Unknown means Research first. Do not infer Python/pandas, modern warehouse
+or scientific proficiency from software experience. Search each required board separately:
 {json.dumps(profile["requiredJobBoards"], ensure_ascii=False)}
 Use domain-targeted web searches across the target role families; do not treat searching one SEEK
 market as covering both. If a board cannot be accessed directly, search its publicly indexed job
@@ -206,8 +209,7 @@ to fill a source gap. Also search employer career pages, LinkedIn and reputable 
 recruiters. Australian listings must explicitly permit working from New Zealand; Australia-only
 remote work does not qualify. Deduplicate vacancies found on multiple boards.
 Location must support Auckland/North Shore with no more than 3 office
-days, remote New Zealand, or NZ-based work for an Australian organisation. Compensation must
-plausibly reach NZD 160,000 base. Calm work is a first-class requirement. Exclude routine on-call,
+days, remote New Zealand, or NZ-based work for an Australian organisation. Follow careerFocus salary policy: verified cancer-research roles can pay below the general floor and require individual review; no lower numeric floor is agreed. Other bridge leads retain the general floor and remain separate. Calm work is a first-class requirement. Exclude routine on-call,
 escalation support, presales-heavy consulting, broad programme management and ambiguous startup
 generalist work. Do not invent salary, work mode or calm evidence; use empty strings for unknowns.
 Return only genuinely current roles with canonical source URLs. Use {today} for captured_date.
@@ -241,6 +243,7 @@ Known URLs to exclude: {json.dumps(sorted(known_urls))}
             float(row["total_score_100"]) < CV_GENERATION_THRESHOLD
             or row["compensation_gate"].startswith("FAIL")
             or row["location_gate"].startswith("FAIL")
+            or row.get("mission_gate", "").startswith("FAIL")
             or url_key in generated_urls
         ):
             continue
@@ -284,7 +287,7 @@ no salary, internal scoring, uncertainty or recruiter questions. Put those only 
 
     repo_url = os.environ.get("GITHUB_REPOSITORY_URL", "").rstrip("/")
     lines = [f"Tanya job-market refresh", "", f"Search date: {today}", ""]
-    qualifying = [row for row in new_scored if float(row["total_score_100"]) >= 62]
+    qualifying = [row for row in new_scored if float(row["total_score_100"]) >= 62 and not any(row.get(g, "").startswith("FAIL") for g in ("compensation_gate", "location_gate", "mission_gate"))]
     if not qualifying:
         lines.append("No new role cleared the bar. The criteria were not weakened.")
     else:
@@ -296,6 +299,7 @@ no salary, internal scoring, uncertainty or recruiter questions. Put those only 
                 "", f"{index}. {row['company']} - {row['title']} - {row['total_score_100']}/100 - {decision}",
                 f"Salary: {detail['salary_evidence'] or 'Not advertised; verification required.'}",
                 f"Location/work mode: {row['location']} / {row['work_mode'] or 'Unknown'}",
+                f"Cancer-research connection: {row.get('mission_connection', 'unknown')} | {row.get('mission_evidence', 'Not verified')}",
                 f"Why it fits: {row['calm_evidence']}",
                 f"Calm-work risks: {row['calm_risks']}",
                 f"Source: {row['url']}",
